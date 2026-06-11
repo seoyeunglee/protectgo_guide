@@ -1,0 +1,18 @@
+{
+  "feature_slug": "protect-go-ai-guide",
+  "context": "pg",
+  "product_name": "Protect Go AI 사용자 가이드",
+  "notion_parent_page": "https://app.notion.com/p/3797d1568e06804a9c9dd279a88d5625?source=copy_link",
+  "mode": "one-page",
+  "ai_agent_included": true,
+  "ai_agent_implementation": "stub",
+  "stakeholders": ["이서영 (작성)", "기획팀 (검토)"],
+  "domain_knowledge_skills": ["protect-go-knowledge"],
+  "design_system_skill": "protect-go-design",
+  "ux_writing_skill": "protect-go-design",
+  "created_at": "2026-06-08",
+  "notion_pages": {
+    "one_pager_id": "37a7d156-8e06-8114-942e-f15410d46eba",
+    "full_prd_id": "37a7d156-8e06-8107-96a3-e3c689865eff"
+  }
+}

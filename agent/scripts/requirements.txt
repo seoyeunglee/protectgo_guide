@@ -1,0 +1,2 @@
+pyyaml
+playwright   # capture_screens.py·auth_login.py — 설치 후 `playwright install chromium` 필요

@@ -1,0 +1,105 @@
+{
+  "source_id": "pg-relabel-prototype",
+  "type": "deployment",
+  "url": "https://pg-relabel-prototype.vercel.app/",
+  "render": false,
+  "deployment_ref": "",
+  "content_hash": "4fc989626ca815c4e178fda7c95460e1cf387e4bfa07a53f48b0381ee5315a5f",
+  "fetched_at": "2026-06-11T06:20:53.511383+00:00",
+  "deployed_at": "2026-06-09T12:51:50+00:00",
+  "sections": {
+    "intro": {
+      "hash": "4b84ff1ca968c51c642ae400a7cb2bbbc16343286430e61b497b9b88a117ff31",
+      "length": 397
+    },
+    "조치이력-작성": {
+      "hash": "ecb7222682cd46df4d9e4cb92bbf4bb16a5e17d2ff45690451db5e4ecee9ae04",
+      "length": 609
+    },
+    "재학습-데이터-활용-방식": {
+      "hash": "b97c88acea72f59309f5beb3c4619e0616654c2fe135d0e1cfc65d41300ad72e",
+      "length": 100
+    },
+    "새로운-정상-패턴-자율-학습-(오경보-감소)": {
+      "hash": "f5e5adfcbb349e6404041604de713b5c3757b763fa69d10488b814d8b2a6d1cb",
+      "length": 220
+    },
+    "고장-유형-분류·예측-(정밀화)": {
+      "hash": "396e317d037e5a0b52abe998e36fc0e23ad6b56be12143523ad32eda8ac52acb",
+      "length": 494
+    },
+    "컴프레셔-진동-이상-탐지-활성": {
+      "hash": "cca76017cf7e9b3fdda74d2c9cbcdf9811f66b4f4c866aefab0412dd0a97a4b6",
+      "length": 122
+    },
+    "모델-정의-및-출력값": {
+      "hash": "95ac2c2fcddc7699f393dcec0bea8b042afcb3c755999f6f8c675b1c20a0b595",
+      "length": 172
+    },
+    "권장-사용-환경": {
+      "hash": "a9cfdca55ffd7c708a95855259db271d83d401270c8215a9548b1833b7e9f6d3",
+      "length": 43
+    },
+    "필요-데이터": {
+      "hash": "76c813965ca7afa69c970138e9fae28b2bd9ac3ad42723b6a857932115aa1abb",
+      "length": 34
+    },
+    "사용-가능한-탐지-유형": {
+      "hash": "b71bfe047683a1a96e1498356f366a45d515ca12aa8fcea0de813dc53c3e8bf9",
+      "length": 53
+    },
+    "원인-진단-모델-만들기": {
+      "hash": "6f4f64930a071fe4fb09a3e5549224627df248f800e802f1fc005d0e016e1a29",
+      "length": 183
+    },
+    "컴프레셔-진동-이상-탐지-v1.33": {
+      "hash": "2f385bd108870ee9f741185ba85f1a830adc9d7a5b78889ba1d204f7f5a3c2e2",
+      "length": 195
+    },
+    "누적-학습-데이터-—-v1.33-기준": {
+      "hash": "3b113aed7cbd1a0908f9aa5810e37d9ad5fd6c1624a65b4ea8940f85d708661c",
+      "length": 86
+    },
+    "재학습-요청": {
+      "hash": "75780ea61f124258ce30e958277444245e73382a3e3344675b16f9dfed5abeeb",
+      "length": 144
+    },
+    "컴프레셔-진동-이상-탐지-v1.32": {
+      "hash": "ed5cd623925d5ac3f09f81d38ea466ddc02ccecb7dab39f7fae03c6730220f89",
+      "length": 173
+    },
+    "누적-학습-데이터-—-v1.32-기준": {
+      "hash": "7141d33133e822950fb9552acb88b4516a00c36c652396f6287589530dd0b12d",
+      "length": 152
+    },
+    "재학습-요청-2": {
+      "hash": "e36104435c2607cf2e52982029d46fb1992d66a285e7b1562352a7bcb15b768d",
+      "length": 140
+    },
+    "재학습-요청-확인": {
+      "hash": "3149cd17563a1f9d2fc85b40794ad6fab5ccbb1f19018661db31a6ce79691aee",
+      "length": 149
+    },
+    "원인-진단-모델-생성": {
+      "hash": "1d142cfab12c8ab3d7dc1263991e55a6eec6817d94a20191a7674ae595c50bc3",
+      "length": 157
+    },
+    "원인-진단-모델-생성-중": {
+      "hash": "8d5c8a952ae5d5d98a6ad9a0f60fbb46193307023c0e88e6ba7d20b7be62500f",
+      "length": 150
+    },
+    "모델-재학습-진행-중": {
+      "hash": "da2866bceffd3f2647e5ea590911254639ac24ec3c7c1d47a28f690a41ff1dbe",
+      "length": 106
+    },
+    "재학습-완료": {
+      "hash": "56f1954198234c4a5299156071527bdbdc5a56dd1bdb94eeba6300ffbcfc6509",
+      "length": 259
+    }
+  },
+  "changed_sections": [],
+  "removed_sections": [],
+  "warnings": [
+    "'hidden' 클래스가 24곳에서 발견됨 — 인터랙션 후에만 노출되는 동적 상태는 정적 추출에 포함되지 않을 수 있음(수동 확인 권장)"
+  ]
+}

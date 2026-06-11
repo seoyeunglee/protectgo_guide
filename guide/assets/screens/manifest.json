@@ -1,0 +1,519 @@
+{
+  "detection-node.configure-event-setting-node": {
+    "page": "/detection-setting/225",
+    "url": "http://13.209.124.163/detection-setting/225",
+    "viewport": {
+      "width": 1600,
+      "height": 900
+    },
+    "captured_at": "2026-06-11T00:45:35+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "shots": [
+      {
+        "id": "canvas",
+        "title": "탐지 시나리오 캔버스",
+        "steps": [
+          1
+        ],
+        "image": "detection-node.configure-event-setting-node--canvas.png",
+        "size": {
+          "width": 1600,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 1,
+            "selector": ".react-flow__node:has-text(\"이벤트 설정\")",
+            "label": "이벤트 설정 노드",
+            "box": {
+              "x": 1186.292236328125,
+              "y": 446.42486572265625,
+              "width": 289.707763671875,
+              "height": 335.0611572265625
+            }
+          }
+        ]
+      },
+      {
+        "id": "node-detail",
+        "title": "이벤트 설정 노드 상세 (확대)",
+        "steps": [
+          2,
+          4,
+          5,
+          6
+        ],
+        "image": "detection-node.configure-event-setting-node--node-detail.png",
+        "size": {
+          "width": 354,
+          "height": 399
+        },
+        "hotspots": [
+          {
+            "n": 2,
+            "selector": ".react-flow__node:has-text(\"이벤트 설정\") [class*=\"node_header\"]",
+            "label": "노드 헤더 (개별/융합 이벤트 설정)",
+            "box": {
+              "x": 44.944580078125,
+              "y": 42.478790283203125,
+              "width": 263.81884765625,
+              "height": 30.20355224609375
+            }
+          },
+          {
+            "n": 4,
+            "selector": ".react-flow__node:has-text(\"이벤트 설정\") input",
+            "label": "기준 설정·발생 건수 입력",
+            "box": {
+              "x": 74.531494140625,
+              "y": 236.76016235351562,
+              "width": 110.951904296875,
+              "height": 22.19036865234375
+            }
+          },
+          {
+            "n": 5,
+            "selector": ".react-flow__node:has-text(\"이벤트 설정\") button:has-text(\"설정 저장\")",
+            "label": "설정 저장 버튼",
+            "box": {
+              "x": 242.192138671875,
+              "y": 336.8576354980469,
+              "width": 69.036865234375,
+              "height": 19.72479248046875
+            }
+          },
+          {
+            "n": 6,
+            "selector": ".react-flow__node:has-text(\"이벤트 설정\") button:has-text(\"전체 연결 해제\")",
+            "label": "전체 연결 해제 버튼",
+            "box": {
+              "x": 245.177978515625,
+              "y": 87.47592163085938,
+              "width": 67.28369140625,
+              "height": 14.7935791015625
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "project-creation.invite-member": {
+    "page": "/account-management",
+    "url": "http://13.209.124.163/account-management",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "captured_at": "2026-06-11T00:45:41+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "shots": [
+      {
+        "id": "account-page",
+        "title": "계정 관리 화면",
+        "steps": [
+          1,
+          2
+        ],
+        "image": "project-creation.invite-member--account-page.png",
+        "size": {
+          "width": 1440,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 1,
+            "selector": "a[href='/account-management']",
+            "label": "계정 관리 메뉴",
+            "box": {
+              "x": 24,
+              "y": 466,
+              "width": 270,
+              "height": 44
+            }
+          },
+          {
+            "n": 2,
+            "selector": "button:has-text(\"멤버 초대하기\")",
+            "label": "멤버 초대하기 버튼",
+            "box": {
+              "x": 468.734375,
+              "y": 145,
+              "width": 133.9375,
+              "height": 40
+            }
+          }
+        ]
+      },
+      {
+        "id": "invite-modal",
+        "title": "멤버 초대하기 모달",
+        "steps": [
+          3,
+          4,
+          5
+        ],
+        "image": "project-creation.invite-member--invite-modal.png",
+        "size": {
+          "width": 1440,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 3,
+            "selector": "input[type=\"email\"]",
+            "label": "이메일 입력란 (+ 추가 버튼)",
+            "box": {
+              "x": 509,
+              "y": 370.25,
+              "width": 320,
+              "height": 40
+            }
+          },
+          {
+            "n": 4,
+            "selector": "button:has-text(\"권한\")",
+            "label": "권한 선택 (일괄 적용)",
+            "box": {
+              "x": 509,
+              "y": 506.25,
+              "width": 192,
+              "height": 40
+            }
+          },
+          {
+            "n": 5,
+            "selector": "button:has-text(\"초대 메일 전송\")",
+            "label": "초대 메일 전송 버튼",
+            "box": {
+              "x": 799,
+              "y": 590.25,
+              "width": 132,
+              "height": 36
+            }
+          }
+        ]
+      },
+      {
+        "id": "invite-tab",
+        "title": "초대 관리 탭",
+        "steps": [
+          6
+        ],
+        "image": "project-creation.invite-member--invite-tab.png",
+        "size": {
+          "width": 1440,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 6,
+            "selector": "button:has-text(\"초대 관리\")",
+            "label": "초대 관리 탭 (전송 후 자동 전환)",
+            "box": {
+              "x": 604.84375,
+              "y": 82,
+              "width": 67.25,
+              "height": 28
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "project-creation.switch-project": {
+    "page": "/dashboard",
+    "url": "http://13.209.124.163/dashboard",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "captured_at": "2026-06-11T00:45:46+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "shots": [
+      {
+        "id": "header",
+        "title": "헤더 — 프로젝트 선택 드롭다운",
+        "steps": [
+          1
+        ],
+        "image": "project-creation.switch-project--header.png",
+        "size": {
+          "width": 1440,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 1,
+            "selector": "[class*=\"title_container\"] > button",
+            "label": "프로젝트 선택 드롭다운",
+            "box": {
+              "x": 696.25,
+              "y": 17,
+              "width": 47.5,
+              "height": 19
+            }
+          }
+        ]
+      },
+      {
+        "id": "dropdown-open",
+        "title": "프로젝트 목록 (드롭다운 열림)",
+        "steps": [
+          2
+        ],
+        "image": "project-creation.switch-project--dropdown-open.png",
+        "size": {
+          "width": 1440,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 2,
+            "selector": "[class*=\"title_container\"] ul",
+            "label": "소속 프로젝트 목록",
+            "box": {
+              "x": 576,
+              "y": 108,
+              "width": 288,
+              "height": 176
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "detection-node.handle-anomaly-situation": {
+    "page": "/dashboard",
+    "url": "http://13.209.124.163/dashboard",
+    "viewport": {
+      "width": 1920,
+      "height": 950
+    },
+    "captured_at": "2026-06-11T05:42:34+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "shots": [
+      {
+        "id": "header-badge",
+        "title": "헤더 — 알림 개수 배지",
+        "steps": [
+          1
+        ],
+        "image": "detection-node.handle-anomaly-situation--header-badge.png",
+        "size": {
+          "width": 1920,
+          "height": 950
+        },
+        "hotspots": [
+          {
+            "n": 1,
+            "selector": "header button:has-text(\"99+\")",
+            "label": "알림 개수 배지",
+            "box": {
+              "x": 1781,
+              "y": 5,
+              "width": 44,
+              "height": 44
+            }
+          }
+        ]
+      },
+      {
+        "id": "alert-center",
+        "title": "알림 센터 — 상황 탭",
+        "steps": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "image": "detection-node.handle-anomaly-situation--alert-center.png",
+        "size": {
+          "width": 1920,
+          "height": 950
+        },
+        "hotspots": [
+          {
+            "n": 2,
+            "selector": "[role=\"tab\"]:has-text(\"상황\")",
+            "label": "상황 탭",
+            "box": {
+              "x": 1574.65625,
+              "y": 133,
+              "width": 160.671875,
+              "height": 44
+            }
+          },
+          {
+            "n": 3,
+            "selector": "button:has-text(\"유형\")",
+            "label": "상태·유형 필터",
+            "box": {
+              "x": 1549.203125,
+              "y": 194,
+              "width": 70.203125,
+              "height": 36
+            }
+          },
+          {
+            "n": 4,
+            "selector": ":text(\"현장을 확인하고 담당자를 배정해 주세요.\")",
+            "label": "알림 카드 (신규 상황)",
+            "box": {
+              "x": 1414,
+              "y": 1205.40625,
+              "width": 482,
+              "height": 19.59375
+            }
+          },
+          {
+            "n": 5,
+            "selector": "button:has-text(\"모두 읽음\")",
+            "label": "모두 읽음",
+            "box": {
+              "x": 1819.953125,
+              "y": 196,
+              "width": 76.046875,
+              "height": 32
+            }
+          }
+        ]
+      },
+      {
+        "id": "realtime-drawer",
+        "title": "이상 발생 알림 (실시간)",
+        "steps": [
+          6
+        ],
+        "image": "detection-node.handle-anomaly-situation--realtime-drawer.png",
+        "size": {
+          "width": 1920,
+          "height": 950
+        },
+        "hotspots": [
+          {
+            "n": 6,
+            "selector": ":text(\"이상 발생 알림\")",
+            "label": "이상 발생 알림 드로어",
+            "box": {
+              "x": 1528,
+              "y": 61.859375,
+              "width": 392,
+              "height": 31.28125
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "detection-node.create-first-scenario": {
+    "page": "/detection-setting",
+    "url": "http://13.209.124.163/detection-setting",
+    "viewport": {
+      "width": 1600,
+      "height": 900
+    },
+    "captured_at": "2026-06-11T07:40:56+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "shots": [
+      {
+        "id": "scenario-list",
+        "title": "탐지 설정 — 시나리오 목록",
+        "steps": [
+          1,
+          2
+        ],
+        "image": "detection-node.create-first-scenario--scenario-list.png",
+        "size": {
+          "width": 1600,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 1,
+            "selector": "a[href='/detection-setting']",
+            "label": "탐지 설정 메뉴",
+            "box": {
+              "x": 24,
+              "y": 130,
+              "width": 270,
+              "height": 44
+            }
+          },
+          {
+            "n": 2,
+            "selector": "button:has-text(\"시나리오 생성\")",
+            "label": "시나리오 생성 버튼",
+            "box": {
+              "x": 602,
+              "y": 140.140625,
+              "width": 137.9375,
+              "height": 40
+            }
+          }
+        ]
+      },
+      {
+        "id": "create-modal",
+        "title": "탐지 시나리오 생성 팝업",
+        "steps": [
+          3
+        ],
+        "image": "detection-node.create-first-scenario--create-modal.png",
+        "size": {
+          "width": 1600,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 3,
+            "selector": "button:has-text(\"생성하기\")",
+            "label": "생성하기 (이름·장소·폴더 입력 후)",
+            "box": {
+              "x": 903,
+              "y": 618.4375,
+              "width": 112,
+              "height": 32
+            }
+          }
+        ]
+      },
+      {
+        "id": "canvas",
+        "title": "시나리오 캔버스 — 노드 구성과 탐지 시작",
+        "steps": [
+          4,
+          5
+        ],
+        "image": "detection-node.create-first-scenario--canvas.png",
+        "size": {
+          "width": 1600,
+          "height": 900
+        },
+        "hotspots": [
+          {
+            "n": 4,
+            "selector": ":text(\"알림 및 제어\")",
+            "label": "노드 카테고리 사이드바",
+            "box": {
+              "x": 15.703125,
+              "y": 557.125,
+              "width": 65.578125,
+              "height": 16
+            }
+          },
+          {
+            "n": 5,
+            "selector": "button:has-text(\"탐지 시작\")",
+            "label": "탐지 시작 버튼",
+            "box": {
+              "x": 1468,
+              "y": 12,
+              "width": 120,
+              "height": 40
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

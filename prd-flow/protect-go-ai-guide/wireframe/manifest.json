@@ -1,0 +1,103 @@
+{
+  "feature_slug": "protect-go-ai-guide",
+  "context": "pg",
+  "design_system": "@idbrnd/design-system",
+  "ux_writing_source": "protect-go-design/references/tone-and-writing.md",
+  "screens": [
+    {
+      "id": "screen-01",
+      "name": "KB 엔트리 목록",
+      "file": "screens/01-KBEntryList.jsx",
+      "primary_persona": "KB/가이드 구축 담당자",
+      "priority": "P0",
+      "features_ref": ["F1"],
+      "components": [
+        { "name": "KBEntryTable", "lib_component": "@idbrnd/design-system/TableContainer+Table+Pagination", "feature_ref": "F1" },
+        { "name": "DomainFilter", "lib_component": "@idbrnd/design-system/Chip", "feature_ref": "F1" },
+        { "name": "DiátaxisFilter", "lib_component": "@idbrnd/design-system/Chip", "feature_ref": "F1" },
+        { "name": "EntrySearch", "lib_component": "@idbrnd/design-system/SearchBar", "feature_ref": "F1" }
+      ]
+    },
+    {
+      "id": "screen-02",
+      "name": "KB 엔트리 편집기",
+      "file": "screens/02-KBEntryEditor.jsx",
+      "primary_persona": "KB/가이드 구축 담당자",
+      "priority": "P0",
+      "features_ref": ["F1", "F2"],
+      "components": [
+        { "name": "EntryMetaForm", "lib_component": "@idbrnd/design-system/Select+Input", "feature_ref": "F1" },
+        { "name": "PolicyField", "lib_component": "@idbrnd/design-system/Input", "feature_ref": "F1" },
+        { "name": "ScreenRefField", "lib_component": "@idbrnd/design-system/Input", "feature_ref": "F2" },
+        { "name": "ProvenancePanel", "lib_component": "custom", "feature_ref": "F1" },
+        { "name": "ComparisonRecord", "lib_component": "custom", "feature_ref": "F2" }
+      ]
+    },
+    {
+      "id": "screen-03",
+      "name": "가이드 홈",
+      "file": "screens/03-GuideHome.jsx",
+      "primary_persona": "Protect Go 일반 사용자·어드민·매니저",
+      "priority": "P0",
+      "features_ref": ["F6"],
+      "components": [
+        { "name": "DomainTabs", "lib_component": "@idbrnd/design-system/SegmentedControl", "feature_ref": "F6" },
+        { "name": "DiátaxisGrid", "lib_component": "custom", "feature_ref": "F6" },
+        { "name": "EntryCard", "lib_component": "custom", "feature_ref": "F6" },
+        { "name": "PersonaToggle", "lib_component": "@idbrnd/design-system/SegmentedControl", "feature_ref": "F6" }
+      ]
+    },
+    {
+      "id": "screen-04",
+      "name": "가이드 엔트리 상세",
+      "file": "screens/04-GuideEntryDetail.jsx",
+      "primary_persona": "Protect Go 일반 사용자·어드민·매니저",
+      "priority": "P0",
+      "features_ref": ["F6"],
+      "components": [
+        { "name": "EntryTypeBadge", "lib_component": "@idbrnd/design-system/ContentBadge", "feature_ref": "F6" },
+        { "name": "TableOfContents", "lib_component": "custom", "feature_ref": "F6" },
+        { "name": "ArticleBody", "lib_component": "custom", "feature_ref": "F6" }
+      ]
+    },
+    {
+      "id": "screen-05",
+      "name": "Diátaxis 템플릿 선택",
+      "file": "screens/05-TemplateSelector.jsx",
+      "primary_persona": "KB/가이드 구축 담당자",
+      "priority": "P1",
+      "features_ref": ["F3"],
+      "components": [
+        { "name": "TypeCard", "lib_component": "custom", "feature_ref": "F3" },
+        { "name": "WritingChecklist", "lib_component": "@idbrnd/design-system/CheckBox", "feature_ref": "F3" },
+        { "name": "ComplexitySelector", "lib_component": "@idbrnd/design-system/Radio", "feature_ref": "F3" }
+      ]
+    },
+    {
+      "id": "screen-06",
+      "name": "소스 변경 영향 점검",
+      "file": "screens/06-SourceChangeChecklist.jsx",
+      "primary_persona": "KB/가이드 구축 담당자",
+      "priority": "P1",
+      "features_ref": ["F5"],
+      "components": [
+        { "name": "SourceSelector", "lib_component": "@idbrnd/design-system/Select", "feature_ref": "F5" },
+        { "name": "ImpactChecklist", "lib_component": "@idbrnd/design-system/CheckBox", "feature_ref": "F5" },
+        { "name": "AffectedEntries", "lib_component": "custom", "feature_ref": "F5" }
+      ]
+    },
+    {
+      "id": "screen-07",
+      "name": "빌드 상태",
+      "file": "screens/07-BuildStatus.jsx",
+      "primary_persona": "KB/가이드 구축 담당자",
+      "priority": "P2",
+      "features_ref": ["F7"],
+      "components": [
+        { "name": "BuildStatusCard", "lib_component": "@idbrnd/design-system/StateBadge", "feature_ref": "F7" },
+        { "name": "BuildHistory", "lib_component": "custom", "feature_ref": "F7" },
+        { "name": "BuildTrigger", "lib_component": "@idbrnd/design-system/FillButton", "feature_ref": "F7" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+/* Pretendard Variable 폰트 로드 — 디자인 시스템은 PretendardMetricAdjusted만 내장하므로 별도 로드 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 디자인 시스템 raw 토큰(--N, --shadow-level-N)을 화면 코드에서 쓰는
+   네이밍(--spacing-N, --level-N)으로 매핑 */
+[data-idb-component] {
+  --spacing-2: var(--2);
+  --spacing-4: var(--4);
+  --spacing-8: var(--8);
+  --spacing-12: var(--12);
+  --spacing-16: var(--16);
+  --spacing-20: var(--20);
+  --spacing-24: var(--24);
+  --spacing-32: var(--32);
+  --spacing-40: var(--40);
+  --spacing-44: var(--44);
+  --spacing-48: var(--48);
+  --spacing-64: var(--64);
+  --spacing-128: var(--128);
+
+  --level-1: var(--shadow-level-1);
+  --level-2: var(--shadow-level-2);
+  --level-3: var(--shadow-level-3);
+  --level-4: var(--shadow-level-4);
+}

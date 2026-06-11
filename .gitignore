@@ -1,0 +1,19 @@
+# PDF 텍스트 추출 캐시 — 재생성 가능, 원본은 refs/Figma_PDF_files (스크립트 자체는 추적)
+extracted/*
+!extracted/*.py
+
+# 가이드 빌드 산출물 — guide/ 빌드 스크립트로 재생성
+guide/dist/
+
+# 로그인 세션(storage_state) — 자격증명·세션은 절대 커밋 금지 (agent/scripts/auth_login.py가 생성)
+agent/.auth/
+
+# 참조 자료(refs/)는 저장소 밖에 위치 — 커밋 대상 아님
+
+# Python 캐시
+__pycache__/
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+*.swp

@@ -1,0 +1,19 @@
+{
+  "source_id": "protect-go-react",
+  "type": "deployment",
+  "url": "https://protect-go-react.vercel.app/",
+  "render": true,
+  "deployment_ref": "",
+  "content_hash": "6a404e1eaef4e5cda39bf911fab588df94eedd33e1f3347466cceea540d1c409",
+  "fetched_at": "2026-06-11T06:20:53.213792+00:00",
+  "deployed_at": "2026-06-11T04:15:35+00:00",
+  "sections": {
+    "intro": {
+      "hash": "6a404e1eaef4e5cda39bf911fab588df94eedd33e1f3347466cceea540d1c409",
+      "length": 1173
+    }
+  },
+  "changed_sections": [],
+  "removed_sections": [],
+  "warnings": []
+}
