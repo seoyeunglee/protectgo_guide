@@ -88,15 +88,42 @@ python agent/scripts/check_screen_ref.py --fetch
 엔트리별로 "상태"(코드 참조 최신 여부)와 "캡처 상태"(캡처 최신 여부)가 별개 신호로 보고된다.
 `capture_stale`/`not_captured`가 나오면 `capture_screens.py --stale-only`(또는 `--only <id>`)로 갱신한다.
 
-## 사이트 구조
-- `dist/index.html` — 홈. "역할별로 찾아보기"(일반 사용자/하우투가 필요한 사용자/어드민·매니저)와
-  "도메인별로 찾아보기"(프로젝트 생성, 탐지 시나리오·노드) 두 진입 경로를 제공한다.
-- `dist/<category>/index.html` — 도메인 페이지. `kb/<category>/README.md` 소개 + Diátaxis
-  4유형(튜토리얼/하우투/레퍼런스/설명)별 엔트리 목록 또는 "준비 중" 안내.
-- `dist/<category>/<diataxis_type>/index.html` — 유형별 목록 페이지.
-- `dist/<category>/<diataxis_type>/<id>.html` — KB 엔트리 본문(`title`/`description`/본문 마크다운)을
-  렌더링한 페이지. `policy`/`screen_ref`/`provenance` 등 KB 내부 메타데이터는 가이드에 노출하지 않는다.
+## 사이트 구조 (2026-06-12 IA 개편)
+- `dist/index.html` — 홈: "가이드 이용 방법" 3단계 다이어그램 + 기능(도메인) 카드(실제 화면
+  캡처 썸네일 + 한 줄 설명 + 대표 링크) + 문서 유형 안내(Diátaxis 4유형 설명).
+- `dist/<category>/index.html` — 기능(도메인) 랜딩: `kb/<category>/README.md`의 개념 소개
+  (구 explanation 개념 페이지를 병합) + 유형별 엔트리 목록.
+- `dist/<category>/<diataxis_type>/<id>.html` — KB 엔트리 본문 페이지. `policy`/`screen_ref`/
+  `provenance` 등 KB 내부 메타데이터는 가이드에 노출하지 않는다.
+- `dist/<category>/<diataxis_type>/index.html` — 유형별 목록 (구 경로 호환용 — 내비게이션에는
+  노출하지 않음).
 
-모든 페이지는 좌측 사이드바에 동일한 도메인 × Diátaxis 탐색 트리를 표시한다.
+사이드바는 **기능(도메인) 그룹 드롭다운**이다 — 그룹 아래 "소개"(랜딩)와 엔트리들이 유형
+배지(튜토리얼/하우투/레퍼런스/설명)와 함께 나열된다. 상위 개념 = 기능(도메인), 유형은
+항목 라벨로만 쓴다. 파일 경로 기준은 그대로 `kb/<category>/<dtype>/<slug>.md` →
+`dist/<category>/<dtype>/<slug>.html` 1:1 매핑이다.
 
 빌드 스크립트는 사람이 수동으로 실행하는 전제다 (F7의 자동 빌드/CI 연동은 범위 밖).
+
+## 출처와 반영 흐름 (가이드 운영 — 작성자용)
+
+> 이전에는 가이드 내 explanation 페이지("이 가이드가 만들어지는 방식")로 노출했으나,
+> 작성자용 내부 문서로 이동했다 (2026-06-12 IA 개편).
+
+가이드 한 편은 단일 문서가 아니라 여러 출처의 조합이다. 필드마다 권위 있는 출처가 다르다.
+
+| 가이드 내용 | 출처 | 권위 |
+|---|---|---|
+| 제목·기능 요약 | PRD (기획 문서) | 확정 |
+| 정책 (상태 전환·유효성·예외) | 화면설계서 PDF 정책 추출분 / protect-go-knowledge | 확정 |
+| 화면 세부 (버튼·문구·구성) | 프론트엔드 코드 | 확정 |
+| 동작 요구사항 | 티켓(수용 기준) | 확정 |
+| 확정 출처가 없는 신규 기능 | 배포 프로토타입 (라이브 URL) | draft (임시) |
+
+draft 출처 규칙: 권위는 항상 확정 출처가 우선한다. 확정 출처가 생기면 교체(승격)하고,
+draft는 텍스트 출처로만 쓴다 — 가이드 화면 이미지는 실제 솔루션에서만 캡처한다.
+
+반영 흐름(요약): 페치(`fetch_deployment_source.py` / `check_screen_ref.py --pull`)로 소스를
+받고, 변경 감지 결과를 사람이 검토해 바뀐 부분만 갱신하고, 코드가 바뀐 화면만 재캡처한 뒤
+빌드한다. 본문 자동 재생성은 하지 않는다. 커맨드는 [agent/scripts/README.md](../agent/scripts/README.md)의
+"배포 버전 업데이트 루틴" 참고.

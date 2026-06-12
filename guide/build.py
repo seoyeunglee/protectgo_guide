@@ -39,8 +39,17 @@ SCREENS_DIST_DIR = DIST_DIR / "assets" / "screens"
 
 CATEGORY_ORDER = ["project-creation", "detection-node"]
 CATEGORY_LABELS = {
-    "project-creation": "프로젝트 생성",
+    "project-creation": "프로젝트 생성·관리",
     "detection-node": "탐지 시나리오·노드",
+}
+# 홈 도메인 카드 — 한 줄 설명 + 실제 화면 캡처 썸네일(guide/assets/screens 재사용)
+CATEGORY_TAGLINES = {
+    "project-creation": "워크스페이스를 만들고, 멤버를 초대하고, 권한을 관리합니다.",
+    "detection-node": "노드를 연결해 탐지 시나리오를 만들고, 이상 상황 알림을 확인합니다.",
+}
+CATEGORY_THUMBS = {
+    "project-creation": "project-creation.invite-member--account-page.png",
+    "detection-node": "detection-node.create-first-scenario--canvas.png",
 }
 
 DIATAXIS_ORDER = ["tutorial", "how-to", "reference", "explanation"]
@@ -50,34 +59,13 @@ DIATAXIS_LABELS = {
     "reference": "레퍼런스",
     "explanation": "설명",
 }
-
-# 역할별로 찾아보기 — F6 "권한 범위에 맞는 정보를 찾는 경로 제공" 요구의 최소 구현.
-PERSONA_SHORTCUTS = [
-    {
-        "title": "처음 사용하는 일반 사용자",
-        "description": "Protect Go가 처음이라면 프로젝트를 만들고 첫 탐지 시나리오를 구성하는 튜토리얼부터 시작하세요.",
-        "links": [
-            ("프로젝트 생성 튜토리얼", "project-creation/tutorial/index.html"),
-            ("탐지 시나리오·노드 튜토리얼", "detection-node/tutorial/index.html"),
-        ],
-    },
-    {
-        "title": "작업 중 특정 목표를 달성하려는 사용자",
-        "description": "멤버 초대, 프로젝트 전환, 이벤트 설정 노드 구성 등 구체적인 작업 절차는 하우투에서 확인하세요.",
-        "links": [
-            ("프로젝트 생성 하우투", "project-creation/how-to/index.html"),
-            ("탐지 시나리오·노드 하우투", "detection-node/how-to/index.html"),
-        ],
-    },
-    {
-        "title": "어드민·매니저 (권한·정책 확인)",
-        "description": "권한 범위, 정책 기준, 노드·설정 사양은 레퍼런스와 설명에서 확인하세요.",
-        "links": [
-            ("프로젝트 생성 레퍼런스", "project-creation/reference/index.html"),
-            ("탐지 시나리오·노드 설명", "detection-node/explanation/index.html"),
-        ],
-    },
-]
+# 홈의 문서 유형 안내 — 독자가 어떤 유형을 골라야 하는지 한 줄로 알려준다
+DIATAXIS_INTRO = {
+    "tutorial": "처음부터 끝까지 따라 하며 배웁니다.",
+    "how-to": "특정 작업의 절차를 단계별로 안내합니다.",
+    "reference": "정확한 사양·옵션·제한값을 표로 정리합니다.",
+    "explanation": "개념과 동작 원리를 이해하도록 돕습니다.",
+}
 
 MD = markdown.Markdown(extensions=["extra", "sane_lists"])
 
@@ -288,33 +276,47 @@ def build_entry_map(entries: list[dict]) -> dict[tuple[str, str], list[dict]]:
 
 
 def build_nav_tree(entry_map: dict[tuple[str, str], list[dict]]) -> list[dict]:
+    """사이드바 = 기능(도메인) 그룹 드롭다운. 유형은 중간 단계가 아니라 항목 배지로 표시한다."""
     tree = []
     for category in CATEGORY_ORDER:
-        cat_node = {"label": CATEGORY_LABELS[category], "href": f"{category}/index.html", "children": []}
+        group = {
+            "label": CATEGORY_LABELS[category],
+            "href": f"{category}/index.html",
+            "entries": [],
+        }
         for dtype in DIATAXIS_ORDER:
-            type_node = {"label": DIATAXIS_LABELS[dtype], "href": f"{category}/{dtype}/index.html", "children": []}
             for entry in entry_map.get((category, dtype), []):
-                type_node["children"].append({
+                group["entries"].append({
                     "label": entry["frontmatter"]["title"],
+                    "badge": DIATAXIS_LABELS[dtype],
                     "href": f"{category}/{dtype}/{slug_for(entry)}.html",
-                    "children": [],
                 })
-            cat_node["children"].append(type_node)
-        tree.append(cat_node)
+        tree.append(group)
     return tree
 
 
 def render_nav(tree: list[dict], current_dir: pathlib.Path, current_href: str) -> str:
-    def render_nodes(nodes: list[dict]) -> str:
-        items = []
-        for node in nodes:
-            href_rel = rel_href(current_dir, DIST_DIR / node["href"])
-            cls = ' class="active"' if node["href"] == current_href else ""
-            children = render_nodes(node["children"]) if node["children"] else ""
-            items.append(f'<li><a href="{href_rel}"{cls}>{html.escape(node["label"])}</a>{children}</li>')
-        return "<ul>" + "".join(items) + "</ul>"
-
-    return render_nodes(tree)
+    groups = []
+    for group in tree:
+        intro_rel = rel_href(current_dir, DIST_DIR / group["href"])
+        intro_cls = ' class="active"' if group["href"] == current_href else ""
+        items = [f'<li><a href="{intro_rel}"{intro_cls}>소개</a></li>']
+        group_open = current_href == "" or group["href"] == current_href
+        for entry in group["entries"]:
+            href_rel = rel_href(current_dir, DIST_DIR / entry["href"])
+            cls = ' class="active"' if entry["href"] == current_href else ""
+            if entry["href"] == current_href:
+                group_open = True
+            items.append(
+                f'<li><a href="{href_rel}"{cls}>{html.escape(entry["label"])}'
+                f'<span class="type-badge">{entry["badge"]}</span></a></li>'
+            )
+        groups.append(
+            f'<details class="nav-group"{" open" if group_open else ""}>'
+            f"<summary>{html.escape(group['label'])}</summary>"
+            f'<ul>{"".join(items)}</ul></details>'
+        )
+    return "".join(groups)
 
 
 def render_breadcrumb(parts: list[tuple[str, pathlib.Path | None]], current_dir: pathlib.Path) -> str:
@@ -357,37 +359,61 @@ def page_shell(title: str, nav_html: str, breadcrumb_html: str, content_html: st
 def render_home(tree: list[dict], entry_map: dict[tuple[str, str], list[dict]]) -> str:
     nav_html = render_nav(tree, DIST_DIR, "")
 
-    persona_cards = []
-    for card in PERSONA_SHORTCUTS:
-        links_html = "".join(
-            f'<li><a href="{href}">{html.escape(label)}</a></li>' for label, href in card["links"]
-        )
-        persona_cards.append(
-            f'<div class="card"><h3>{html.escape(card["title"])}</h3>'
-            f'<p>{html.escape(card["description"])}</p>'
-            f'<ul>{links_html}</ul></div>'
-        )
-
+    # ① 기능(도메인) 카드 — 실제 화면 캡처 썸네일 + 한 줄 설명 + 대표 진입 링크
     domain_cards = []
     for category in CATEGORY_ORDER:
-        type_links = "".join(
-            f'<li><a href="{category}/{dtype}/index.html">{DIATAXIS_LABELS[dtype]}'
-            f' ({len(entry_map.get((category, dtype), []))}개)</a></li>'
-            for dtype in DIATAXIS_ORDER
-        )
+        thumb = CATEGORY_THUMBS.get(category, "")
+        thumb_html = ""
+        if thumb and (SCREENS_SRC_DIR / thumb).exists():
+            thumb_html = (
+                f'<a class="domain-thumb" href="{category}/index.html">'
+                f'<img src="assets/screens/{thumb}" alt="{CATEGORY_LABELS[category]} 화면 미리보기" loading="lazy"></a>'
+            )
+        quick_links = []
+        for dtype in DIATAXIS_ORDER:
+            for entry in entry_map.get((category, dtype), [])[:1]:
+                quick_links.append(
+                    f'<li><a href="{category}/{dtype}/{slug_for(entry)}.html">'
+                    f'{html.escape(entry["frontmatter"]["title"])}</a>'
+                    f'<span class="type-badge">{DIATAXIS_LABELS[dtype]}</span></li>'
+                )
         domain_cards.append(
-            f'<div class="card"><h3><a href="{category}/index.html">{CATEGORY_LABELS[category]}</a></h3>'
-            f'<ul>{type_links}</ul></div>'
+            f'<div class="card domain-card">{thumb_html}'
+            f'<h3><a href="{category}/index.html">{CATEGORY_LABELS[category]}</a></h3>'
+            f'<p>{html.escape(CATEGORY_TAGLINES.get(category, ""))}</p>'
+            f'<ul>{"".join(quick_links)}</ul></div>'
         )
+
+    # ② 가이드 구성 다이어그램 — 기능 → 문서 유형 → 본문(절차 번호 = 화면 핀 번호)
+    diagram = (
+        '<div class="flow-diagram">'
+        '<div class="flow-step"><strong>1. 기능 선택</strong>'
+        "<span>사이드바 또는 아래 카드에서 사용할 기능을 고릅니다.</span></div>"
+        '<div class="flow-arrow">&#8250;</div>'
+        '<div class="flow-step"><strong>2. 문서 유형 선택</strong>'
+        "<span>배우기(튜토리얼) · 작업(하우투) · 사양(레퍼런스) 중 목적에 맞게 고릅니다.</span></div>"
+        '<div class="flow-arrow">&#8250;</div>'
+        '<div class="flow-step"><strong>3. 절차 따라가기</strong>'
+        "<span>본문 절차 번호와 화면 캡처의 핀 번호가 같은 단계를 가리킵니다.</span></div>"
+        "</div>"
+    )
+
+    # ③ 문서 유형 안내 — Diátaxis 4유형을 독자 언어로 설명
+    type_items = "".join(
+        f'<div class="doc-type"><span class="type-badge">{DIATAXIS_LABELS[dtype]}</span>'
+        f"<p>{DIATAXIS_INTRO[dtype]}</p></div>"
+        for dtype in DIATAXIS_ORDER
+    )
 
     content = (
         "<h1>Protect Go 사용자 가이드</h1>"
         '<p class="description">프로젝트 생성과 탐지 시나리오·노드 구성을 중심으로,'
-        " 화면 구성과 정책을 함께 정리한 가이드입니다.</p>"
-        "<section><h2>역할별로 찾아보기</h2>"
-        f'<div class="card-grid">{"".join(persona_cards)}</div></section>'
-        "<section><h2>도메인별로 찾아보기</h2>"
-        f'<div class="card-grid">{"".join(domain_cards)}</div></section>'
+        " 실제 화면과 정책을 함께 정리한 가이드입니다.</p>"
+        f"<section><h2>가이드 이용 방법</h2>{diagram}</section>"
+        "<section><h2>기능별로 찾아보기</h2>"
+        f'<div class="card-grid domain-grid">{"".join(domain_cards)}</div></section>'
+        "<section><h2>문서 유형 안내</h2>"
+        f'<div class="doc-type-grid">{type_items}</div></section>'
     )
 
     return page_shell("홈", nav_html, "", content, DIST_DIR)

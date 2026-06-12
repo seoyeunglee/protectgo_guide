@@ -431,3 +431,186 @@ blockquote p {
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
+
+/* ---- IA 개편 (2026-06-12): 기능별 사이드바 드롭다운 · 유형 배지 · 홈 다이어그램 · 썸네일 카드 ---- */
+.nav-group {
+  margin-bottom: 4px;
+}
+
+.nav-group summary {
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-fg);
+  padding: 8px 10px;
+  border-radius: 6px;
+  list-style: none;
+}
+
+.nav-group summary::before {
+  content: "\203A";
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--color-muted);
+  transition: transform 0.15s ease;
+}
+
+.nav-group[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.nav-group summary:hover {
+  background: var(--color-accent-bg);
+}
+
+.nav-group ul {
+  list-style: none;
+  margin: 2px 0 10px;
+  padding-left: 14px;
+}
+
+.nav-group li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+.type-badge {
+  flex-shrink: 0;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-muted);
+  background: #f3f4f6;
+  border-radius: 999px;
+  padding: 1px 7px;
+}
+
+.sidebar .type-badge {
+  background: #eef0f3;
+}
+
+/* 홈 — 가이드 이용 방법 다이어그램 */
+.flow-diagram {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 16px 0 8px;
+}
+
+.flow-step {
+  flex: 1;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fafbfc;
+  padding: 14px 16px;
+}
+
+.flow-step strong {
+  display: block;
+  font-size: 14px;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+}
+
+.flow-step span {
+  font-size: 13px;
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
+.flow-arrow {
+  align-self: center;
+  font-size: 22px;
+  color: var(--color-muted);
+}
+
+/* 홈 — 기능(도메인) 썸네일 카드 */
+.domain-grid {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.domain-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.domain-thumb {
+  display: block;
+  border-bottom: 1px solid var(--color-border);
+  background: #f3f4f6;
+}
+
+.domain-thumb img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.domain-card h3,
+.domain-card p,
+.domain-card ul {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.domain-card h3 {
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.domain-card h3 a {
+  color: var(--color-fg);
+  text-decoration: none;
+}
+
+.domain-card p {
+  font-size: 13.5px;
+  color: var(--color-muted);
+  margin-top: 0;
+}
+
+.domain-card ul {
+  list-style: none;
+  padding: 0 0 14px;
+}
+
+.domain-card li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 13.5px;
+}
+
+/* 홈 — 문서 유형 안내 */
+.doc-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 16px 0 32px;
+}
+
+.doc-type {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.doc-type .type-badge {
+  background: var(--color-accent-bg);
+  color: var(--color-accent);
+  font-size: 12px;
+}
+
+.doc-type p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--color-muted);
+}
