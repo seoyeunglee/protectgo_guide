@@ -98,8 +98,8 @@ provenance:
       - "src/pages/AccountManagement/Invite/Invite.jsx"
       - "src/pages/AccountManagement/components/Constants.js"
       - "src/api/invite.js"
-    version: "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711"
-    captured_commit: "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711"
+    version: "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030"
+    captured_commit: "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030"
   acceptance:  { source: "ticket", ref: "", version: "" }
 language: ko
 updated_at: "2026-06-10"

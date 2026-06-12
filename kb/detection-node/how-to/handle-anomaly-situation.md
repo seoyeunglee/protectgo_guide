@@ -22,13 +22,11 @@ policy: |
 screen_ref:
   notes: |
     - 알림 센터(헤더 "99+" 배지 버튼 → 우측 드로어)는 2026.06.04 개편 화면이다. 구현 코드는
-      `ProtectGO-ENT-FE`의 `origin/develop`(= `origin/qa`, 커밋 `8b277532d3ec`)
-      `src/components/Header/AppHeader/AlertCenterDrawer/` 디렉터리에 있다
-      (`AlertCenterDrawer.jsx` — 전체/상황/시스템 탭·"모두 읽음", `AlertItem.jsx`,
-      `NotificationFilterPopup.jsx`, `SystemAlertItem.jsx`).
-      현재 F5 점검의 비교 기준 브랜치(`feat/video-monitoring-widget`)에는 이 디렉터리가
-      없어 provenance.ref에는 넣지 않는다 — 비교 기준을 develop으로 전환할 때 ref·version을
-      이 커밋 기준으로 승격한다. 아래 화면 세부는 배포된 실제 화면(dev 프로젝트) 관찰 기준이다.
+      `src/components/Header/AppHeader/AlertCenterDrawer/` 디렉터리 —
+      `AlertCenterDrawer.jsx`(전체/상황/시스템 탭·"모두 읽음"), `AlertItem.jsx`(상황 이벤트
+      카드), `NotificationFilterPopup.jsx`(상태·유형 필터), `SystemAlertItem.jsx`(시스템 알림).
+      F5 점검 비교 기준을 `origin/develop`으로 전환하면서 provenance.ref로 승격했다
+      (2026-06-12). 아래 화면 세부는 배포된 실제 화면(dev 프로젝트) 관찰로 검증했다.
       - 헤더: "[N]개의 새로운 알림이 있습니다." / 탭 전체·상황·시스템(우측 미읽음 수) /
         상태·유형 필터 버튼 / "모두 읽음" / 정렬 "최신순" / "총 N건"
       - 카드: 유형 라벨(신규 상황·상황 업데이트·심각도 상승 등) + 상대 시각 + 상황 요약 제목 +
@@ -92,9 +90,13 @@ provenance:
     source: "frontend_code"
     ref:
       - "src/components/Header/AppHeader/AppHeader.jsx"
+      - "src/components/Header/AppHeader/AlertCenterDrawer/AlertCenterDrawer.jsx"
+      - "src/components/Header/AppHeader/AlertCenterDrawer/AlertItem.jsx"
+      - "src/components/Header/AppHeader/AlertCenterDrawer/NotificationFilterPopup.jsx"
+      - "src/components/Header/AppHeader/AlertCenterDrawer/SystemAlertItem.jsx"
       - "src/components/Notification/Notification.jsx"
-    version: "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711"
-    captured_commit: "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711"
+    version: "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030"
+    captured_commit: "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030"
   acceptance:  { source: "ticket", ref: "", version: "" }
 language: ko
 updated_at: "2026-06-11"
@@ -145,4 +147,4 @@ updated_at: "2026-06-11"
 
 ## 개편 예정 미리보기
 
-이상 상황을 문제 단위로 묶어 확인·조치·감사까지 한 흐름으로 처리하는 "이상 상황 레이어" 개편이 프로토타입으로 공개되어 있다. 개편 내용과 이 가이드가 개편을 추적하는 방식은 [이 가이드가 만들어지는 방식](../explanation/anomaly-alert-guide-sourcing.html)에서 설명한다.
+이상 상황을 문제 단위로 묶어 확인·조치·감사까지 한 흐름으로 처리하는 "이상 상황 레이어" 개편이 구현되어 정식 공개를 기다리고 있다(현재 단계적 공개 전). 공개되면 이 가이드에 실제 화면과 절차가 추가된다. 개편 내용과 출처 승격 이력은 [이 가이드가 만들어지는 방식](../explanation/anomaly-alert-guide-sourcing.html)에서 설명한다.

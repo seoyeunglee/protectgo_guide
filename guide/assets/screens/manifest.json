@@ -6,8 +6,8 @@
       "width": 1600,
       "height": 900
     },
-    "captured_at": "2026-06-11T00:45:35+00:00",
-    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "captured_at": "2026-06-12T00:19:44+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
         "id": "canvas",
@@ -104,8 +104,8 @@
       "width": 1440,
       "height": 900
     },
-    "captured_at": "2026-06-11T00:45:41+00:00",
-    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "captured_at": "2026-06-12T00:20:20+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
         "id": "account-page",
@@ -227,8 +227,8 @@
       "width": 1440,
       "height": 900
     },
-    "captured_at": "2026-06-11T00:45:46+00:00",
-    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "captured_at": "2026-06-12T00:20:27+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
         "id": "header",
@@ -289,8 +289,8 @@
       "width": 1920,
       "height": 950
     },
-    "captured_at": "2026-06-11T05:42:34+00:00",
-    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "captured_at": "2026-06-12T00:19:57+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
         "id": "header-badge",
@@ -360,7 +360,7 @@
             "label": "알림 카드 (신규 상황)",
             "box": {
               "x": 1414,
-              "y": 1205.40625,
+              "y": 610.40625,
               "width": 482,
               "height": 19.59375
             }
@@ -412,8 +412,8 @@
       "width": 1600,
       "height": 900
     },
-    "captured_at": "2026-06-11T07:40:56+00:00",
-    "captured_commit": "ProtectGO-ENT-FE@4e979115d8ee26f5fb22dd420e7c1342d8495711",
+    "captured_at": "2026-06-12T00:20:09+00:00",
+    "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
         "id": "scenario-list",

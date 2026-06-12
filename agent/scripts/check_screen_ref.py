@@ -98,7 +98,21 @@ def run_git(repo: pathlib.Path, *args: str) -> str:
 
 
 def resolve_compare_ref(repo: pathlib.Path) -> str:
-    """비교 기준 ref. upstream 추적 브랜치가 있으면 그것, 없으면 HEAD."""
+    """비교 기준 ref — 제품 기능이 모이는 브랜치를 기준으로 점검한다.
+
+    우선순위: 환경변수 PROTECTGO_FE_COMPARE_REF > origin/develop(기본) >
+    현재 브랜치의 upstream > HEAD. 체크아웃 없이 ref로만 비교하므로
+    로컬 클론의 작업 브랜치는 바꾸지 않는다.
+    """
+    env_ref = os.environ.get("PROTECTGO_FE_COMPARE_REF")
+    candidates = [env_ref] if env_ref else []
+    candidates.append("origin/develop")
+    for ref in candidates:
+        try:
+            run_git(repo, "rev-parse", "--verify", ref)
+            return ref
+        except RuntimeError:
+            continue
     try:
         return run_git(repo, "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{upstream}")
     except RuntimeError:

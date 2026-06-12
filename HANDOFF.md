@@ -7,7 +7,7 @@
 | Feature | 상태 | 비고 |
 |---|---|---|
 | F1 (KB 엔트리 스키마 적용) | 완료 | `schema/kb-entry.md` 기준, 엔트리 3개에 적용 |
-| F2 (실제 엔트리 1~2개 제작 + 비교 검증) | 완료 + 확장 | KB 엔트리 9개 — project-creation 4(튜토리얼·하우투2·레퍼런스) + detection-node 5(튜토리얼·하우투2·설명2). 역할별 카드가 가리키는 4개 칸 모두 채움 |
+| F2 (실제 엔트리 1~2개 제작 + 비교 검증) | 완료 + 확장 | KB 엔트리 11개 — Diátaxis 8칸(도메인 2 × 유형 4) 전부 채움. F5 비교 기준은 `origin/develop`(version: `8b277532d3ec`) |
 | F5 (소스 변경 영향 수동 점검) | 완료 | `agent/scripts/check_screen_ref.py` — 최근 점검: 2026-06-10, `--fetch` 포함 3개 엔트리 모두 `up_to_date` |
 | F6 (가이드 웹페이지 출력) | 완료 (최소 구현 + 화면 캡처 보강) | `guide/build.py` → `guide/dist/`. 실제 화면 캡처(강조 테두리+번호 핀) 연동 — `agent/scripts/capture_screens.py`, 3개 엔트리 모두 캡처 완료 |
 | F7 (kb/ → guide/ 자동 빌드·CI) | 미착수 | P2. "V1 종료 시점까지 수동 빌드 확인 수준으로 충분" (`09-priorities.md`) |
@@ -83,6 +83,26 @@
   빌드된 페이지를 브라우저로 열어 슬라이드 동작(이전/다음·카운터·랩어라운드·장면 캡션) 확인.
   dev 프로젝트 앱 호스트는 `http://13.209.124.163`(로그인은 `https://protectgo.kr/login`)
   — 호스트 변경 시 `PG_CAPTURE_BASE_URL_PROTECTGO_DEV`로 덮어쓰기.
+
+### 추가 4 — PRD 구현 현황 반영 · develop 전환 · draft 승격 · 콘텐츠 2차 (2026-06-12)
+
+- **PRD 갱신**: Notion 라이브 PRD + repo 미러에 "구현 현황 (V1)" 표(F1~F8 상태·산출물) 추가,
+  Status를 "V1 구현 완료 (기획팀 검토 대기)"로, 산출물 저장소 링크 명시.
+- **F5 비교 기준 develop 전환**: `resolve_compare_ref`가 `PROTECTGO_FE_COMPARE_REF` 환경변수 >
+  `origin/develop`(기본) > upstream 순으로 기준을 정함 — 체크아웃 없이 ref로만 비교해
+  로컬 클론의 작업 브랜치를 건드리지 않음. 전환 후 5개 엔트리 review_needed → 변경 파일
+  7개 diff 검토(전부 i18n 래핑·리팩터·알림 센터 통합 — 본문 영향 없음) → version을
+  `develop@8b277532d3ec`로 승격, AlertCenterDrawer 4개 파일을 handle-anomaly-situation의
+  provenance.ref로 정식 승격, 5개 엔트리 재캡처(13장면) — 전체 최신 확인.
+- **draft → 확정 승격 첫 사례 완료**: 이상 상황 레이어 구현이 develop
+  `src/pages/AbnormalSituation`(상세·조치 이력 기록)에 반영된 것을 확인 →
+  `anomaly-alert-guide-sourcing`의 policy 출처를 deployment(draft, protect-go-react)에서
+  frontend_code(확정)로 교체. 본문 "예고된 개편의 승격" 절에 추적→승격 이력 3단계 기록.
+  단 feature flag `abnormalSituationListWidget`로 정식 공개 전이라 how-to 본문·캡처 확장은
+  공개 후로 보류. protect-go-react 스냅샷은 이력으로 보존(갱신 종료).
+- **콘텐츠 2차**: `project-creation/explanation/project-workspace-concepts.md`(프로젝트·
+  소유/참여·권한·생명주기 개념), `detection-node/reference/node-catalog.md`(노드 카탈로그 +
+  공통 사양) — **Diátaxis 8칸 전부 채움 (KB 11개, 가이드 22페이지)**.
 
 ### 추가 3 — 콘텐츠 확장 1차 (P0: 빈 Diátaxis 칸 채우기)
 
