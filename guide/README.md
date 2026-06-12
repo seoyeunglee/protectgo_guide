@@ -41,6 +41,26 @@ python guide/build.py
 `guide/dist/`에 정적 HTML이 생성된다. 확인은 `python -m http.server --directory guide/dist`
 실행 후 브라우저에서 `http://localhost:8000`으로 접속한다.
 
+## 배포 (GitHub Pages — 수동)
+
+공유 URL: **https://seoyeunglee.github.io/protectgo_guide/**
+
+배포는 `gh-pages` 브랜치에 빌드 산출물을 푸시하는 수동 절차다 (자동 배포/CI는 F7 범위 밖).
+
+```powershell
+python guide/build.py
+Remove-Item -Recurse -Force $env:TEMP\pg-deploy -ErrorAction SilentlyContinue
+New-Item -ItemType Directory $env:TEMP\pg-deploy | Out-Null
+Copy-Item guide\dist\* $env:TEMP\pg-deploy -Recurse
+New-Item -ItemType File $env:TEMP\pg-deploy\.nojekyll | Out-Null
+cd $env:TEMP\pg-deploy
+git init -b gh-pages; git add -A; git commit -m "deploy"
+git push -f https://github.com/seoyeunglee/protectgo_guide.git gh-pages
+```
+
+주의: 가이드에는 실제 제품 화면 캡처(dev 프로젝트 데이터)가 포함된다 — 공개 범위는
+저장소 공개 설정을 따른다.
+
 ## 결과물 확인 방법
 
 **1. 캡처 PNG 원본 — 빌드 없이 바로 확인**

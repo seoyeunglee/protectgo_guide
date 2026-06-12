@@ -83,6 +83,13 @@
   dev 프로젝트 앱 호스트는 `http://13.209.124.163`(로그인은 `https://protectgo.kr/login`)
   — 호스트 변경 시 `PG_CAPTURE_BASE_URL_PROTECTGO_DEV`로 덮어쓰기.
 
+### 추가 7 — 가이드 배포 (2026-06-12)
+
+- GitHub Pages 배포: `gh-pages` 브랜치에 `guide/dist` 빌드 산출물 푸시(`.nojekyll` 포함).
+  공유 URL: **https://seoyeunglee.github.io/protectgo_guide/** (상대 경로 기반이라
+  하위 경로 호스팅에 그대로 동작). 재배포 절차는 `guide/README.md` "배포" 절 — 수동
+  푸시이며 자동 배포/CI는 F7 범위 밖 유지.
+
 ### 추가 6 — 홈 레이아웃 수정 + PG 디자인 토큰 적용 (2026-06-12)
 
 - 홈 깨짐 수정 3건: 와이드 화면에서 본문 좌측 쏠림(`margin: 0 auto` 중앙 정렬),

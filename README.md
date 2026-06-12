@@ -1,5 +1,7 @@
 # Protect Go 사용자 가이드 · KB
 
+> **가이드 보기(배포본)**: https://seoyeunglee.github.io/protectgo_guide/
+
 지식 베이스(KB)를 구조화하고, 그 위에서 Protect Go 최신 버전 사용자 가이드(웹페이지)를 만드는 프로젝트입니다.
 **가이드를 만드는 작업 = KB 콘텐츠를 구조화하는 작업**입니다.
 
