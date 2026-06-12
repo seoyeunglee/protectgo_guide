@@ -15,6 +15,19 @@
 
 `prd-flow/protect-go-ai-guide/` — Macro Gate 1 → 1.5 → 2 통과, wireframe Phase 2(화면 7개) 완료, Notion 업로드 완료.
 
+## 저장소·소스 규칙
+
+- 이 가이드 저장소의 원격: `https://github.com/seoyeunglee/protectgo_guide.git` (main).
+  git identity는 저장소 로컬 설정(seoyeunglee / syoo0183oo@gmail.com).
+- **프론트엔드 코드(ProtectGO-ENT-FE)는 이 저장소에 올리지 않는다** — 코드는
+  `https://github.com/idbrnd/ProtectGO-ENT-FE.git`에서 로컬 클론
+  (`C:\Users\idb\AI-DLC\ProtectGO-ENT-FE`, `PROTECTGO_FE_REPO`로 변경 가능)으로 받아
+  경로·커밋 참조만 KB에 기록한다. 받기: `python agent/scripts/check_screen_ref.py --pull`.
+- 알림 센터(2026.06.04 개편) 구현 코드는 FE의 `origin/develop`(= `origin/qa`,
+  `8b277532d3ec`) `src/components/Header/AppHeader/AlertCenterDrawer/`에 있음 —
+  현재 F5 비교 기준 브랜치(`feat/video-monitoring-widget`)에는 없어 provenance.ref 제외,
+  엔트리 notes에 기록(비교 기준을 develop으로 전환할 때 승격).
+
 ## 이번 세션에서 변경·생성한 파일 — F6 보강 (실제 화면 캡처 + 강조 테두리 + 번호 핀)
 
 ### 신규 스크립트 (`agent/scripts/`, 모두 수동 실행 — 서로 자동 호출하지 않음)
