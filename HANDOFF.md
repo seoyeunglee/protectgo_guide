@@ -11,7 +11,7 @@
 | F5 (소스 변경 영향 수동 점검) | 완료 | `agent/scripts/check_screen_ref.py` — 최근 점검: 2026-06-10, `--fetch` 포함 3개 엔트리 모두 `up_to_date` |
 | F6 (가이드 웹페이지 출력) | 완료 (최소 구현 + 화면 캡처 보강) | `guide/build.py` → `guide/dist/`. 실제 화면 캡처(강조 테두리+번호 핀) 연동 — `agent/scripts/capture_screens.py`, 3개 엔트리 모두 캡처 완료 |
 | F7 (kb/ → guide/ 자동 빌드·CI) | 미착수 | P2. "V1 종료 시점까지 수동 빌드 확인 수준으로 충분" (`09-priorities.md`) |
-| F8 (라이브 배포 소스 참조 + 동기화 트리거) | 완료 + 첫 실사용 | P2. `agent/scripts/fetch_deployment_source.py` — 스냅샷 2개(`pg-relabel-prototype`, `protect-go-react`). `protect-go-react`(이상 상황 레이어 프로토타입, SPA라 `--render` 페치)는 `detection-node.anomaly-alert-guide-sourcing`(explanation)의 `policy`가 draft 출처로 실제 참조 중 |
+| F8 (라이브 배포 소스 참조 + 동기화 트리거) | 완료 + 승격 1건 | P2. `agent/scripts/fetch_deployment_source.py` — 스냅샷 2개. `protect-go-react`(이상 상황 레이어)는 draft 추적 후 frontend_code 확정 출처로 승격 완료(스냅샷은 이력 보존, 갱신 종료) |
 
 `prd-flow/protect-go-ai-guide/` — Macro Gate 1 → 1.5 → 2 통과, wireframe Phase 2(화면 7개) 완료, Notion 업로드 완료.
 
@@ -23,10 +23,9 @@
   `https://github.com/idbrnd/ProtectGO-ENT-FE.git`에서 로컬 클론
   (`C:\Users\idb\AI-DLC\ProtectGO-ENT-FE`, `PROTECTGO_FE_REPO`로 변경 가능)으로 받아
   경로·커밋 참조만 KB에 기록한다. 받기: `python agent/scripts/check_screen_ref.py --pull`.
-- 알림 센터(2026.06.04 개편) 구현 코드는 FE의 `origin/develop`(= `origin/qa`,
-  `8b277532d3ec`) `src/components/Header/AppHeader/AlertCenterDrawer/`에 있음 —
-  현재 F5 비교 기준 브랜치(`feat/video-monitoring-widget`)에는 없어 provenance.ref 제외,
-  엔트리 notes에 기록(비교 기준을 develop으로 전환할 때 승격).
+- F5 비교 기준은 `origin/develop`(기본, `PROTECTGO_FE_COMPARE_REF`로 변경 가능).
+  알림 센터(AlertCenterDrawer) 코드는 develop 기준으로 `handle-anomaly-situation`의
+  provenance.ref에 정식 승격 완료(2026-06-12).
 
 ## 이번 세션에서 변경·생성한 파일 — F6 보강 (실제 화면 캡처 + 강조 테두리 + 번호 핀)
 
