@@ -84,6 +84,18 @@
   dev 프로젝트 앱 호스트는 `http://13.209.124.163`(로그인은 `https://protectgo.kr/login`)
   — 호스트 변경 시 `PG_CAPTURE_BASE_URL_PROTECTGO_DEV`로 덮어쓰기.
 
+### 추가 6 — 홈 레이아웃 수정 + PG 디자인 토큰 적용 (2026-06-12)
+
+- 홈 깨짐 수정 3건: 와이드 화면에서 본문 좌측 쏠림(`margin: 0 auto` 중앙 정렬),
+  문서 유형 카드 외톨이 줄바꿈(4열 고정, 1100px 이하 2열), 좁은 화면 다이어그램 압축
+  (980px 이하 세로 스택 + 화살표 회전).
+- protect-go-design 스킬 적용: `:root`에 PG 토큰 선언(semantic primary #4A71FF·natural·
+  informative, radius-large 12/medium 8, level-1·2), 타이포 위계 PG 스케일
+  (title-1 28 / heading-2 18 / body-2 14 / label-2 12), 사이드바 흰 배경 + 활성 항목
+  다크 표면(natural-deep) 패턴, 콜아웃 informative 토큰. hex는 :root 선언부에만 존재.
+- 캡처 강조 테두리도 PG primary(#4A71FF)로 통일(`capture_screens.py HIGHLIGHT_JS`) 후
+  전체 재캡처(5/5, 13장면) — 핀·절차 번호·화면 강조색 일치.
+
 ### 추가 5 — 가이드 IA 개편 (2026-06-12, 사용자 지시)
 
 - **홈 재설계** (디자인 레퍼런스: 헬프센터 균일 그리드 카드 + 썸네일, NN/g 카드 패턴,

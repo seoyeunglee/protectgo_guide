@@ -614,3 +614,92 @@ blockquote p {
   font-size: 13px;
   color: var(--color-muted);
 }
+
+/* ════════════════════════════════════════════════════════════════
+   PG 디자인 토큰 레이어 (protect-go-design 적용, 2026-06-12)
+   — 정적 사이트라 @idbrnd/design-system 미사용. 필요한 토큰만 :root에
+     선언하고 아래에서는 var()만 쓴다. (hex는 이 선언부에만 존재)
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  /* semantic 매핑: 기존 변수 → PG 토큰 값 */
+  --color-bg: #FFFFFF;                          /* semantic-bg-default */
+  --color-bg-light: #F7F7F8;                    /* semantic-bg-light */
+  --color-fg: #171719;                          /* semantic-text-default */
+  --color-strong: #000000;                      /* semantic-text-strong */
+  --color-muted: #70737C;                       /* semantic-text-sub */
+  --color-border: #EAEBEC;                      /* semantic-natural-default */
+  --color-accent: #4A71FF;                      /* semantic-primary-default */
+  --color-accent-bg: #EDF1FF;                   /* semantic-primary-light */
+  --color-accent-bg-xlight: #F7F9FF;            /* semantic-primary-extra-light */
+  --color-info: #3366FF;                        /* content-informative-default */
+  --color-info-bg: #EBF0FF;                     /* content-informative-extra-light */
+  --color-deep: #171719;                        /* semantic-natural-deep — 다크 표면(활성 nav) */
+  --radius-card: 12px;                          /* radius-large */
+  --radius-control: 8px;                        /* radius-medium */
+  --level-1: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --level-2: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 타이포 위계 — PG 스케일 (title-1 28 / heading-2 18 / body-2 14 / label-2 12) */
+body { font-size: 14px; line-height: 1.5; }
+.content > p, .content li, .content td { font-size: 14px; }
+.content > p, .content > ul li, .content > ol li { line-height: 1.7; }   /* reading 140%+ */
+h1 { font-size: 28px; font-weight: 600; color: var(--color-strong); }
+h2 { font-size: 18px; font-weight: 600; }
+h3 { font-size: 15px; font-weight: 600; }
+.description { font-size: 14px; }
+.breadcrumb, .guide-figure figcaption, .guide-slide-caption { font-size: 12px; }
+
+/* 사이드바 — PG 규칙: 흰 배경, 활성 항목은 다크 표면 + 흰 텍스트 */
+.sidebar { background: var(--color-bg); }
+.sidebar a.active,
+.nav-group li a.active {
+  background: var(--color-deep);
+  color: #fff;
+}
+.nav-group li a.active .type-badge { background: rgba(255, 255, 255, 0.16); color: #fff; }
+.nav-group li a:hover:not(.active) { background: var(--color-bg-light); }
+
+/* 카드·컨트롤 radius/shadow 표준화 */
+.card, .entry-list li, .flow-step, .doc-type, .guide-figure-frame, .guide-figure-placeholder {
+  border-radius: var(--radius-card);
+}
+.guide-slider-btn, blockquote { border-radius: var(--radius-control); }
+.card, .entry-list li { box-shadow: var(--level-1); }
+
+/* 콜아웃 — informative 토큰 */
+blockquote {
+  border-left-color: var(--color-info);
+  background: var(--color-info-bg);
+  color: var(--color-fg);
+  border-radius: 0 var(--radius-control) var(--radius-control) 0;
+}
+
+/* 회색 hex 사용처 → 토큰 정리 */
+code, .guide-figure figcaption code, .guide-figure-placeholder code, .type-badge { background: var(--color-bg-light); }
+thead th { background: var(--color-bg-light); }
+tbody tr:nth-child(even) { background: var(--color-accent-bg-xlight); }
+.flow-step, .guide-figure-placeholder, .domain-thumb { background: var(--color-bg-light); }
+.sidebar .type-badge { background: var(--color-border); }
+
+/* ── 레이아웃 수정 (홈 깨짐) ───────────────────────────────── */
+/* 1) 와이드 화면: 본문을 가운데 정렬해 우측 공백 제거 */
+.content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 2) 문서 유형 안내: 한 줄 4열 (좁으면 2열) — 외톨이 줄바꿈 방지 */
+.doc-type-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1100px) {
+  .doc-type-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 3) 좁은 화면: 이용 방법 다이어그램 세로 스택 */
+@media (max-width: 980px) {
+  .flow-diagram { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
+}

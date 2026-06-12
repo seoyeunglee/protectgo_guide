@@ -6,7 +6,7 @@
       "width": 1600,
       "height": 900
     },
-    "captured_at": "2026-06-12T00:19:44+00:00",
+    "captured_at": "2026-06-12T04:07:24+00:00",
     "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
@@ -104,7 +104,7 @@
       "width": 1440,
       "height": 900
     },
-    "captured_at": "2026-06-12T00:20:20+00:00",
+    "captured_at": "2026-06-12T04:08:00+00:00",
     "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
@@ -227,7 +227,7 @@
       "width": 1440,
       "height": 900
     },
-    "captured_at": "2026-06-12T00:20:27+00:00",
+    "captured_at": "2026-06-12T04:08:07+00:00",
     "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
@@ -289,7 +289,7 @@
       "width": 1920,
       "height": 950
     },
-    "captured_at": "2026-06-12T00:19:57+00:00",
+    "captured_at": "2026-06-12T04:07:37+00:00",
     "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {
@@ -360,7 +360,7 @@
             "label": "알림 카드 (신규 상황)",
             "box": {
               "x": 1414,
-              "y": 610.40625,
+              "y": 350,
               "width": 482,
               "height": 19.59375
             }
@@ -412,7 +412,7 @@
       "width": 1600,
       "height": 900
     },
-    "captured_at": "2026-06-12T00:20:09+00:00",
+    "captured_at": "2026-06-12T04:07:49+00:00",
     "captured_commit": "ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030",
     "shots": [
       {

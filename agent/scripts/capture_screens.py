@@ -52,10 +52,11 @@ STATE_PATH = REPO_ROOT / "agent" / ".auth" / "state.json"
 SNAPSHOTS_DIR = REPO_ROOT / "agent" / "snapshots"
 
 DEFAULT_VIEWPORT = {"width": 1440, "height": 900}
+# 강조 색 = PG semantic-primary-default(#4A71FF) — 가이드의 핀·절차 번호 색과 일치시킨다
 HIGHLIGHT_JS = (
-    "el => { el.style.outline = '3px solid #2563eb';"
+    "el => { el.style.outline = '3px solid #4A71FF';"
     " el.style.outlineOffset = '1px';"
-    " el.style.boxShadow = '0 0 0 4px rgba(37,99,235,.25)'; }"
+    " el.style.boxShadow = '0 0 0 4px rgba(74,113,255,.25)'; }"
 )
 SELECTOR_TIMEOUT_MS = 15000
 
