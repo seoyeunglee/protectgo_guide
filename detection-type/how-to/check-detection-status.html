@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>탐지 확인 현황 보기·대응하기 · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>탐지 유형별 설정</summary><ul><li><a href="../index.html">소개</a></li><li><a href="set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="check-detection-status.html" class="active">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">탐지 유형별 설정</a> / <a href="index.html">하우투</a> / <span>탐지 확인 현황 보기·대응하기</span></p>
+    <p class="diataxis-badge">하우투</p><h1>탐지 확인 현황 보기·대응하기</h1><p class="description">탐지된 이상을 미해결→확인중→해결로 처리하고, 이상 여부 판정과 문제 유형을 입력해 일괄 확인하는 방법</p>
+<p>탐지가 잡혔다고 끝이 아니다. 담당자가 현장을 확인하고 <strong>실제 문제였는지, 오탐이었는지</strong> 판정해 기록을 남겨야 한다. 이 처리 흐름은 영상·임계치·통계 등 모든 탐지 유형이 공통으로 따른다.</p>
+<h2>처리 상태 — 미해결 → 확인중 → 해결</h2>
+<table>
+<thead>
+<tr>
+<th>상태</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>미해결</td>
+<td>탐지됐지만 아직 아무도 확인하지 않음</td>
+</tr>
+<tr>
+<td>확인중</td>
+<td>담당자가 "확인 시작"을 눌러 처리 중 (해당 장소 담당자에게 자동 배정)</td>
+</tr>
+<tr>
+<td>해결</td>
+<td>이상 여부 판정과 문제 유형 입력을 마쳐 확인 완료</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"확인 시작"은 해당 장소의 담당자만 누를 수 있고, 누른 사람에게 자동으로 배정된다.</p>
+</blockquote>
+<h2>한 건씩 또는 일괄로 처리하기</h2>
+<p>여러 미해결 건을 한 번에 처리할 때는 <strong>일괄 확인 조치 패널</strong>을 쓴다.</p>
+<ol>
+<li>화면 우측의 <strong>일괄 확인 패널</strong>을 연다. 미해결 탐지건만 자동으로 모여 표시된다.</li>
+<li>처리할 건을 <strong>체크</strong>한다(전체 선택도 가능). 1건 이상 고르면 [일괄 확인]이 활성화된다.</li>
+<li><strong>1차 판정</strong>: 선택한 건이 실제 문제면 <strong>[이상 발생 확인]</strong>, 오탐이면 <strong>[이상 없음]</strong>을 누른다.</li>
+<li>이상 발생 확인이라면 <strong>문제 유형</strong>을 고른다. 탐지 종류별로 최소 1개 이상 선택해야 등록된다. 기본 제공 유형에서 고르거나 <strong>직접 입력</strong>(최대 20자)한다.</li>
+<li><strong>[등록하기]</strong>로 확정하면 선택 건이 '확인 완료(해결)'로 바뀐다.</li>
+</ol>
+<blockquote>
+<p>자주 쓰는 문제 유형은 <strong>"이 문제 유형을 저장하여 다음에도 사용"</strong>을 체크해 저장한다 — 해당 장소·탐지 유형의 문제 유형으로 등록되어 다음에 바로 고를 수 있다.</p>
+</blockquote>
+<h2>처리 중 다른 사람이 먼저 처리했다면</h2>
+<p>일괄 확인은 누를 때 선택 건 중 <strong>현재 "미확인" 상태인 건만</strong> 다시 검증해 처리한다. 그 사이 다른 담당자가 일부를 먼저 처리했다면 "N건 중 M건 처리완료되었습니다" 안내가 표시된다 — 중복 처리를 막기 위한 동작이다.</p>
+<h2>다음 단계</h2>
+<ul>
+<li>모바일에서 같은 확인 흐름을 처리하는 방법은 모바일 앱(후속 도메인)의 안전 체크리스트를 참고한다.</li>
+<li>탐지 유형별 설정으로 돌아가려면 <a href="../index.html">탐지 유형별 설정 소개</a>를 본다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>

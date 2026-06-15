@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>다른 프로젝트로 전환하기 · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>프로젝트 생성·관리</summary><ul><li><a href="../index.html">소개</a></li><li><a href="../tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="switch-project.html" class="active">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>탐지 유형별 설정</summary><ul><li><a href="../../detection-type/index.html">소개</a></li><li><a href="../../detection-type/how-to/set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">프로젝트 생성·관리</a> / <a href="index.html">하우투</a> / <span>다른 프로젝트로 전환하기</span></p>
+    <p class="diataxis-badge">하우투</p><h1>다른 프로젝트로 전환하기</h1><p class="description">헤더의 프로젝트 선택 드롭다운에서 소속된 다른 프로젝트로 전환하는 방법</p><figure class="guide-figure"><div class="guide-slider"><div class="guide-slide active"><div class="guide-figure-frame"><img src="../../assets/screens/project-creation.switch-project--header.png" alt="다른 프로젝트로 전환하기 — 헤더 — 프로젝트 선택 드롭다운" width="1440" height="900"><span class="highlight-box" style="left:48.35%;top:1.89%;width:3.30%;height:2.11%" title="프로젝트 선택 드롭다운"><span class="hotspot">1</span></span></div><p class="guide-slide-caption">단계 1 · 헤더 — 프로젝트 선택 드롭다운</p></div><div class="guide-slide"><div class="guide-figure-frame"><img src="../../assets/screens/project-creation.switch-project--dropdown-open.png" alt="다른 프로젝트로 전환하기 — 프로젝트 목록 (드롭다운 열림)" width="1440" height="900"><span class="highlight-box" style="left:40.00%;top:12.00%;width:20.00%;height:19.56%" title="소속 프로젝트 목록"><span class="hotspot">2</span></span></div><p class="guide-slide-caption">단계 2 · 프로젝트 목록 (드롭다운 열림)</p></div><div class="guide-slider-nav"><button type="button" class="guide-slider-btn" data-dir="-1">&#8249; 이전</button><span class="guide-slider-counter">1 / 2</span><button type="button" class="guide-slider-btn" data-dir="1">다음 &#8250;</button></div></div><figcaption>마지막 캡처: 2026-06-12T04:08:07+00:00 · 기준 코드: ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030<br>이 화면 다시 캡처: <code>python agent/scripts/capture_screens.py --only project-creation.switch-project</code></figcaption></figure><script>
+document.querySelectorAll(".guide-slider").forEach(function (slider) {
+  var slides = slider.querySelectorAll(".guide-slide");
+  var counter = slider.querySelector(".guide-slider-counter");
+  var idx = 0;
+  function show(i) {
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function (slide, j) { slide.classList.toggle("active", j === idx); });
+    if (counter) counter.textContent = (idx + 1) + " / " + slides.length;
+  }
+  slider.querySelectorAll(".guide-slider-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () { show(idx + Number(btn.dataset.dir)); });
+  });
+  show(0);
+});
+</script>
+<p>헤더의 프로젝트 선택 드롭다운을 사용해 현재 소속된 다른 프로젝트로 전환하는 방법을 설명한다.</p>
+<h2>절차</h2>
+<ol class="steps">
+<li>화면 상단 헤더에서 현재 프로젝트명 옆의 드롭다운 화살표 아이콘을 누른다.</li>
+<li>소속된 프로젝트 목록이 드롭다운으로 펼쳐진다. 전환할 프로젝트명을 누른다.</li>
+<li>정상 상태인 프로젝트를 선택하면 0%, 70%, 90%, 100% 순서로 표시되는 접속 진행률 팝업을 거쳐 해당 프로젝트의 대시보드로 이동한다.</li>
+<li>진행률 팝업이 15초 이상 멈춰 있으면 접근 실패 안내가 표시된다.</li>
+</ol>
+<h2>비활성화된 프로젝트</h2>
+<ul>
+<li>"일시 중지" 배지가 표시된 프로젝트는 선택할 수 없다.</li>
+<li>항목에 마우스를 올리면 "비활성화되어 접근할 수 없습니다." 안내가 표시된다.</li>
+</ul>
+<h2>더 많은 프로젝트 보기</h2>
+<p>드롭다운 상단의 "선택 페이지" 버튼을 누르면, 소속된 프로젝트를 카드 형태로 모아 보여주는 별도의 프로젝트 선택 페이지로 이동한다. 이 페이지는 별도의 인증(Auth) 애플리케이션에서 제공된다.</p>
+<h2>범위 메모</h2>
+<p>프로젝트 카드·멤버 수 표시·프로젝트 접속 버튼으로 구성된 "프로젝트 선택 페이지"와, 이름 입력·멤버 초대·용도 선택 3단계로 구성된 "프로젝트 생성 위저드"는 ProtectGO-ENT-FE 코드베이스에 존재하지 않는다. 두 화면 모두 별도의 Auth 프론트엔드 애플리케이션(<code>AUTH_URL</code> 환경 변수로 참조)에 구현되어 있다. 두 화면을 다루는 KB 엔트리를 작성하려면 해당 저장소를 <code>screen_ref</code> 소스로 추가 확보해야 한다.</p>
+  </main>
+</div>
+</body>
+</html>

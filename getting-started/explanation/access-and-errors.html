@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>접근 제한·에러 화면이 뜨는 경우 · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group" open><summary>시작하기</summary><ul><li><a href="../index.html">소개</a></li><li><a href="../tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="access-and-errors.html" class="active">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>탐지 유형별 설정</summary><ul><li><a href="../../detection-type/index.html">소개</a></li><li><a href="../../detection-type/how-to/set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">시작하기</a> / <a href="index.html">설명</a> / <span>접근 제한·에러 화면이 뜨는 경우</span></p>
+    <p class="diataxis-badge">설명</p><h1>접근 제한·에러 화면이 뜨는 경우</h1><p class="description">외부 네트워크 차단·프로젝트 비활성화·접속 실패·에러 페이지 등 접근이 막히는 상황과 그 이유, 대처 방법을 설명</p>
+<p>Protect Go는 산업 현장 데이터를 다루는 만큼 접근을 엄격하게 제한한다. 화면이 막히거나 에러가 떠도 대부분은 고장이 아니라 <strong>의도된 보안 동작</strong>이다. 어떤 경우에 무엇이 뜨고 왜 그런지, 어떻게 대처하는지 정리한다.</p>
+<h2>외부 네트워크에서 접속하면 막힌다</h2>
+<p>프로젝트는 기본적으로 <strong>사내 내부 네트워크에서만</strong> 접근할 수 있다. 외부 IP로 접속하면 접근 권한 오류 페이지가 뜨거나, 프로젝트 접속 시 "보안 정책에 따라 외부 네트워크 접속이 차단되었습니다"라는 안내가 표시된다.</p>
+<ul>
+<li><strong>대처</strong>: 사내 네트워크(내부 IP)에서 접속하거나 VPN으로 연결한 뒤 다시 시도한다.</li>
+<li>브라우저에 <code>ERR_CONNECTION_TIMED_OUT</code>이 뜨는 것도 같은 이유일 수 있다.</li>
+</ul>
+<h2>프로젝트 접속이 멈추거나 실패한다</h2>
+<p>[프로젝트 접속]을 눌렀는데 진행률이 멈춰 있고 <strong>15초 이상 응답이 없으면</strong> 접근 실패 안내가 표시된다. 위의 외부 네트워크 문제이거나, 현장 서버 상태 문제일 수 있다.</p>
+<ul>
+<li><strong>대처</strong>: 네트워크를 확인하고 다시 시도한다. 문제가 계속되면 고객센터로 문의한다.</li>
+</ul>
+<h2>프로젝트가 비활성화되어 있다</h2>
+<p>프로젝트 카드에 <strong>"서비스 이용 일시 중지"</strong>가 표시되고 접속 버튼에 마우스를 올리면 "현재 비활성화되어 접근할 수 없습니다" 툴팁이 뜬다. 이는 공급사 어드민이 해당 프로젝트를 <strong>임시 차단</strong>한 상태다.</p>
+<ul>
+<li><strong>대처</strong>: 사용자가 직접 풀 수 없다. 관리자(어드민)에게 문의한다.</li>
+</ul>
+<h2>로그인을 여러 번 틀렸다</h2>
+<p>같은 아이디로 <strong>5회 이상 로그인에 실패</strong>하면 보안 문자(captcha) 화면이 나타난다. 자동 공격을 막기 위한 동작이다.</p>
+<ul>
+<li><strong>대처</strong>: 화면에 보이는 보안 문자를 정확히 입력한다. 비밀번호가 기억나지 않으면 비밀번호 찾기로 재설정한다.</li>
+</ul>
+<h2>소속된 프로젝트가 없다</h2>
+<p>가입은 했지만 아직 어떤 프로젝트에도 속하지 않으면 <strong>프로젝트 초대 안내 페이지</strong>로 이동한다. 에러가 아니라, 관리자의 초대를 기다리는 정상 상태다.</p>
+<ul>
+<li><strong>대처</strong>: 프로젝트 관리자에게 초대를 요청한다. 관리자가 보낸 초대 메일의 수락 버튼으로 프로젝트에 합류할 수 있다.</li>
+</ul>
+<h2>그 밖의 에러 페이지</h2>
+<p>위에 해당하지 않는 오류는 <strong>에러 코드와 함께 에러 페이지</strong>가 표시된다. 코드를 확인할 수 없으면 "404"로 표시된다. [홈으로 돌아가기]를 누르면 로그인 상태에서는 대시보드로, 비로그인 상태에서는 로그인 페이지로 이동한다.</p>
+  </main>
+</div>
+</body>
+</html>

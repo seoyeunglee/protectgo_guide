@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>권한별 기능 레퍼런스 · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>프로젝트 생성·관리</summary><ul><li><a href="../index.html">소개</a></li><li><a href="../tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="permission-matrix.html" class="active">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>탐지 유형별 설정</summary><ul><li><a href="../../detection-type/index.html">소개</a></li><li><a href="../../detection-type/how-to/set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">프로젝트 생성·관리</a> / <a href="index.html">레퍼런스</a> / <span>권한별 기능 레퍼런스</span></p>
+    <p class="diataxis-badge">레퍼런스</p><h1>권한별 기능 레퍼런스</h1><p class="description">어드민·에디터·매니저·뷰어 4가지 권한의 정의와 기능별 사용 가능 범위</p>
+<p>Protect Go의 권한은 4종이다. 멤버를 초대하거나 권한을 변경하기 전에, 각 권한이 어디까지 할 수 있는지 이 표에서 확인한다.</p>
+<h2>권한 4종</h2>
+<table>
+<thead>
+<tr>
+<th>권한</th>
+<th>대상</th>
+<th>사이드바 접근 범위</th>
+<th>핵심 권한</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>어드민</td>
+<td>공급사(IDB) 내부 운영자</td>
+<td>별도 어드민 페이지</td>
+<td>프로젝트 생성, 디바이스 관리, 라이선스 관리</td>
+</tr>
+<tr>
+<td>에디터</td>
+<td>고객사 관리자</td>
+<td>전체 메뉴</td>
+<td>모든 페이지·기능 접근, 멤버 초대, 위젯 편집, 시나리오 편집</td>
+</tr>
+<tr>
+<td>매니저</td>
+<td>현장 담당자·실무자</td>
+<td>대시보드 + 통계</td>
+<td>담당 장소 설정, 안전 체크 처리</td>
+</tr>
+<tr>
+<td>뷰어</td>
+<td>일반 조회자</td>
+<td>대시보드만</td>
+<td>모든 기능 조회만 (담당 장소 비활성)</td>
+</tr>
+</tbody>
+</table>
+<h2>기능별 사용 가능 범위</h2>
+<table>
+<thead>
+<tr>
+<th>기능</th>
+<th>어드민</th>
+<th>에디터</th>
+<th>매니저</th>
+<th>뷰어</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>프로젝트 생성·삭제</td>
+<td>가능</td>
+<td>가능 (소유자)</td>
+<td>불가</td>
+<td>불가</td>
+</tr>
+<tr>
+<td>멤버 초대</td>
+<td>가능</td>
+<td>가능</td>
+<td>불가</td>
+<td>불가</td>
+</tr>
+<tr>
+<td>권한·소속·담당 장소 변경</td>
+<td>가능</td>
+<td>가능</td>
+<td>불가</td>
+<td>불가</td>
+</tr>
+<tr>
+<td>탐지 시나리오 편집</td>
+<td>가능</td>
+<td>가능</td>
+<td>불가</td>
+<td>불가</td>
+</tr>
+<tr>
+<td>모델 배포 관리</td>
+<td>가능</td>
+<td>가능</td>
+<td>불가</td>
+<td>불가</td>
+</tr>
+<tr>
+<td>대시보드 위젯 편집</td>
+<td>해당 없음</td>
+<td>가능</td>
+<td>불가</td>
+<td>불가</td>
+</tr>
+<tr>
+<td>배치도 위젯 더보기</td>
+<td>해당 없음</td>
+<td>가능</td>
+<td>가능</td>
+<td>가능</td>
+</tr>
+<tr>
+<td>안전 체크리스트 "확인 시작"</td>
+<td>해당 없음</td>
+<td>미확정*</td>
+<td>가능 (담당 장소만)</td>
+<td>불가</td>
+</tr>
+<tr>
+<td>통계 페이지 조회</td>
+<td>가능</td>
+<td>가능</td>
+<td>가능</td>
+<td>불가</td>
+</tr>
+</tbody>
+</table>
+<p>*미확정: 사양서에 명시되지 않은 항목 — 실제 운영 시 확인이 필요하다.</p>
+<h2>권한 변경 시 동작</h2>
+<ul>
+<li>권한 변경은 <strong>계정 정보 수정 팝업</strong> 또는 <strong>일괄 변경 팝업</strong>에서 진행한다.</li>
+<li><strong>에디터</strong>로 변경하면 담당 장소가 "전체" 1개로 자동 지정되고, 개별 장소는 지정할 수 없다.</li>
+<li><strong>매니저</strong>로 지정할 때만 담당 장소 선택 셀렉박스가 활성화된다.</li>
+<li><strong>뷰어</strong>를 선택하면 소속·담당 장소 셀렉박스가 비활성화된다.</li>
+</ul>
+<h2>관련 가이드</h2>
+<ul>
+<li>멤버를 초대하는 절차는 <a href="../how-to/invite-member.html">멤버 초대하기</a>를 참고한다. 프로젝트 생성 중 초대는 권한이 매니저로 고정되고, 계정 관리 경로의 초대는 에디터/매니저/뷰어 중 선택할 수 있다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>

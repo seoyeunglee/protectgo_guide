@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>영상 이상 탐지 설정하기 (쓰러짐·안전모 등) · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>탐지 유형별 설정</summary><ul><li><a href="../index.html">소개</a></li><li><a href="set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-video-anomaly-detection.html" class="active">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">탐지 유형별 설정</a> / <a href="index.html">하우투</a> / <span>영상 이상 탐지 설정하기 (쓰러짐·안전모 등)</span></p>
+    <p class="diataxis-badge">하우투</p><h1>영상 이상 탐지 설정하기 (쓰러짐·안전모 등)</h1><p class="description">CCTV·열화상 영상에 비전 AI 모델로 작업자·지게차 등 객체를 탐지하도록 설정하는 방법과 탐지 데이터 확인</p>
+<p>영상 이상 탐지는 CCTV나 열화상 영상에서 <strong>비전 AI가 객체를 인식</strong>해 위험을 잡는 방식이다. 작업자 쓰러짐, 안전모 미착용, 지게차 충돌 위험처럼 "화면에 무엇이 보이는가"로 판정한다.</p>
+<h2>설정 절차</h2>
+<ol class="steps">
+<li>시나리오에 <strong>영상 데이터 노드</strong>(CCTV·듀얼 열화상)를 놓고 데이터 소스를 연결한다 — <a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기</a>.</li>
+<li>감시할 영역만 보려면 <strong>탐지 영역(ROI)을 지정</strong>한다. 화면 전체를 보려면 생략한다.</li>
+<li><strong>영상 탐지 설정 노드</strong>(예: 쓰러짐 탐지)를 연결하고, <strong>탐지 영역별 탐지 대상</strong>(작업자·지게차·안전모 등)을 매핑한다 — <a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기</a>.</li>
+<li><strong>이벤트 설정 노드</strong>로 발생 조건을 정하고, 필요하면 알림 노드를 붙인다.</li>
+</ol>
+<blockquote>
+<p>권장 설치 환경: 카메라 높이 <strong>3M 이상</strong>, 야외 환경에 적합하다. 작업자 안전 모델은 쓰러짐·충돌 위험·보호구 미착용 등을 지원한다.</p>
+</blockquote>
+<h2>탐지 데이터 확인하기</h2>
+<p>탐지가 잡히면 탐지 데이터에서 무슨 일이 있었는지 본다.</p>
+<ul>
+<li><strong>좌측 패널</strong>: 발생 장소·설비·탐지 설정 이름·데이터 소스명·탐지 영역명·발생일시.</li>
+<li><strong>우측 메인</strong>: 바운딩 박스(또는 ROI)가 표시된 탐지 이미지. 이미지 다운로드·크게 보기·영상 재생을 할 수 있다.</li>
+<li><strong>영상 재생</strong>: 이벤트 발생 <strong>전후 5초</strong>를, 바운딩 박스 없는 실영상으로 보여준다. 반복 재생되며 슬라이더로 임의 시점으로 이동할 수 있다(전체 화면은 ESC로 종료).</li>
+</ul>
+<h2>실시간 영상 보기</h2>
+<ul>
+<li><strong>실시간 데이터 탭</strong>에서 다른 카메라로 전환하며 현재 상황을 본다.</li>
+<li>15초 이상 영상이 호출되지 않으면 "데이터를 불러올 수 없음" 안내가, 외부 네트워크 접속이면 "네트워크 문제로 영상을 표시할 수 없습니다" 안내가 표시된다.</li>
+</ul>
+<h2>다음 단계</h2>
+<ul>
+<li>탐지 후 현장 처리는 <a href="./check-detection-status.html">탐지 확인 현황 보기·대응하기</a>를 참고한다.</li>
+<li>수치 기반 탐지는 <a href="./set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기</a>·<a href="./set-up-statistics-detection.html">통계 분석 탐지 설정하기</a>를 본다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>

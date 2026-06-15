@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>어떤 탐지 유형을 골라야 하나 · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>탐지 유형별 설정</summary><ul><li><a href="../index.html">소개</a></li><li><a href="../how-to/set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="../how-to/set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="../how-to/check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="detection-types-overview.html" class="active">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">탐지 유형별 설정</a> / <a href="index.html">설명</a> / <span>어떤 탐지 유형을 골라야 하나</span></p>
+    <p class="diataxis-badge">설명</p><h1>어떤 탐지 유형을 골라야 하나</h1><p class="description">영상·임계치·통계·발전 효율 탐지의 차이와, 감시하려는 데이터·목적에 따라 어떤 유형을 선택할지 설명</p>
+<p>탐지 유형은 다섯 가지지만, 고르는 기준은 단순하다. <strong>무엇을 감시하느냐</strong>(영상인가 수치인가)와 <strong>어떻게 판정하느냐</strong>(고정된 선인가 평소 패턴인가)로 갈린다.</p>
+<h2>먼저 — 영상인가, 수치인가</h2>
+<ul>
+<li><strong>사람·차량·화재처럼 "보이는 것"을 감시</strong>한다면 → 영상 이상 탐지. 비전 AI가 객체를 인식한다.</li>
+<li><strong>센서·DB의 "측정값"을 감시</strong>한다면 → 임계치 또는 통계 분석 탐지.</li>
+</ul>
+<h2>수치라면 — 고정된 선인가, 평소 패턴인가</h2>
+<table>
+<thead>
+<tr>
+<th>상황</th>
+<th>적합한 유형</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"이 값을 넘으면 무조건 위험" — 명확한 기준선이 있다</td>
+<td>센서 임계치 / DB 임계치 탐지</td>
+</tr>
+<tr>
+<td>절대값은 정상이라도 "평소와 다르게 튀면" 잡고 싶다</td>
+<td>통계 분석 탐지 (Z-Score·변화율·EWMA)</td>
+</tr>
+<tr>
+<td>외부 DB(InfluxDB)에 이미 값이 쌓이고 있다</td>
+<td>DB 임계치 탐지</td>
+</tr>
+<tr>
+<td>태양광 발전소 — 예측 대비 발전량 저하를 본다</td>
+<td>발전 효율 저하 탐지</td>
+</tr>
+</tbody>
+</table>
+<h2>영상 탐지 vs 통계 탐지 — 정리</h2>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>영상 이상 탐지</th>
+<th>통계 분석 탐지</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>데이터 소스</td>
+<td>CCTV / 듀얼 열화상</td>
+<td>센서(수치)</td>
+</tr>
+<tr>
+<td>탐지 단위</td>
+<td>객체(사람·지게차·안전모)</td>
+<td>측정값의 통계적 패턴</td>
+</tr>
+<tr>
+<td>결과물</td>
+<td>바운딩 박스 + 클래스명</td>
+<td>분석값(Z-Score·변화율·EWMA)</td>
+</tr>
+<tr>
+<td>시각화</td>
+<td>이미지 + 영상</td>
+<td>라인 차트 + 평균값 점선</td>
+</tr>
+<tr>
+<td>권장 환경</td>
+<td>카메라 3M↑, 야외 적합</td>
+<td>안정적인 센서 데이터 수집</td>
+</tr>
+</tbody>
+</table>
+<h2>한 시나리오에 섞어 쓸 수 있다</h2>
+<p>탐지 유형은 배타적이지 않다. 같은 장소에서 CCTV로 작업자 안전(영상)을, 진동 센서로 설비 임계치(센서)를, 발전량으로 효율 저하(통계)를 <strong>동시에</strong> 감시할 수 있다. 노드 캔버스에서 각각의 흐름을 그려 한 시나리오에 담거나 여러 시나리오로 나눈다.</p>
+<h2>더 보기</h2>
+<ul>
+<li>각 유형의 설정 절차는 <a href="../index.html">탐지 유형별 설정 소개</a>의 하우투를 참고한다.</li>
+<li>노드를 어떻게 연결하는지는 <a href="../../detection-node/index.html">탐지 시나리오·노드</a> 도메인을 본다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>

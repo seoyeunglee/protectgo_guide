@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>위젯 수치는 어떻게 계산되나 · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>탐지 유형별 설정</summary><ul><li><a href="../../detection-type/index.html">소개</a></li><li><a href="../../detection-type/how-to/set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>대시보드·통계</summary><ul><li><a href="../index.html">소개</a></li><li><a href="../tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="how-widget-values-work.html" class="active">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">대시보드·통계</a> / <a href="index.html">설명</a> / <span>위젯 수치는 어떻게 계산되나</span></p>
+    <p class="diataxis-badge">설명</p><h1>위젯 수치는 어떻게 계산되나</h1><p class="description">실시간 센서 변동 모니터링의 산출식, 비율·숫자 표기 규칙, 라인 차트 Y축 자동 산출 등 위젯이 보여주는 수치의 계산 방식을 설명</p>
+<p>위젯이 보여주는 숫자가 무엇을 뜻하는지 알면 화면을 더 정확히 읽을 수 있다. 자주 오해하는 몇 가지 계산 방식을 정리한다.</p>
+<h2>실시간 센서 변동 모니터링 — 왜 100%가 기준인가</h2>
+<p>이 위젯은 절대값이 아니라 <strong>평소 대비 얼마나 변했는가</strong>를 보여준다. 센서별 평균값을 100%로 두고 현재값을 비교한다.</p>
+<pre><code>표시값 = 100 + (Z-score) × 10
+Z-score = (현재 센서값 − 평균값) ÷ 센서 표준편차
+</code></pre>
+<p>즉 100이면 평소와 같고, 100보다 크게 벗어날수록 평상시와 다른 급격한 변화가 일어나는 중이다. 센서마다 단위·범위가 달라도 같은 척도로 비교할 수 있게 한 장치다.</p>
+<h2>비율(%)은 어떻게 표기되나</h2>
+<p>장소별 이상 발생 건수의 <strong>비율</strong>은 그 기간 전체 발생 건수 대비 값이다. 표기 규칙:</p>
+<ul>
+<li>소수점은 버린다(정수 %).</li>
+<li>한 자리 숫자는 왼쪽에 0을 붙여 두 자리로(예: <code>7%</code> → <code>07%</code>).</li>
+<li>발생 0건인 장소는 차트에 아예 표시하지 않는다(설정에 포함돼 있어도).</li>
+</ul>
+<h2>숫자는 소수점 둘째 자리까지</h2>
+<p>화면에 보이는 모든 수치가 실수일 때는 <strong>소수점 둘째 자리까지만, 내림</strong>으로 표시한다. 그래서 실제 내부 값과 표시값이 미세하게 다를 수 있다.</p>
+<h2>라인 차트 Y축은 자동으로 정해진다</h2>
+<p>통계·발전 효율 등의 라인 차트는 Y축 눈금을 사람이 정하지 않는다. 데이터 범위에 10% 여백을 더하고, 기본 간격(범위÷5)을 로그·내림으로 깔끔한 자리수 단위로 정규화한 뒤(1·2·5·10배), Y축 최소·최대값과 눈금 개수를 계산한다. null 값이나 모든 값이 같은 경우 등은 별도로 처리한다. 덕분에 데이터가 바뀌어도 눈금이 항상 읽기 좋은 간격으로 유지된다.</p>
+<h2>더 보기</h2>
+<ul>
+<li>위젯 종류와 크기는 <a href="../reference/widget-catalog.html">위젯 카탈로그</a>를 본다.</li>
+<li>통계 페이지 분석은 <a href="../how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기</a>를 참고한다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>

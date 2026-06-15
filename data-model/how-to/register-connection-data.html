@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB) · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>탐지 유형별 설정</summary><ul><li><a href="../../detection-type/index.html">소개</a></li><li><a href="../../detection-type/how-to/set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>데이터·모델 관리</summary><ul><li><a href="../index.html">소개</a></li><li><a href="manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="register-connection-data.html" class="active">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">데이터·모델 관리</a> / <a href="index.html">하우투</a> / <span>연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)</span></p>
+    <p class="diataxis-badge">하우투</p><h1>연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)</h1><p class="description">연결 데이터 관리에서 영상(RTSP)·센서·열화상·데이터베이스(InfluxDB) 소스를 등록하고 연결 상태를 관리하는 방법</p>
+<p>탐지의 입력이 될 센서·카메라·DB를 등록하는 곳이다. 연결 데이터 관리(GNB 4번째)에서 하며, <strong>등록·삭제는 에디터</strong> 권한이 필요하다.</p>
+<h2>데이터 소스 등록하기 — 4가지 유형</h2>
+<p>[데이터 소스 등록]을 누르면 유형을 고른다. 어느 유형이든 <strong>데이터 소스명</strong>(2~20자, 중복 불가)·<strong>설치 장소</strong>·<strong>설비 정보</strong>(선택)는 공통이다.</p>
+<table>
+<thead>
+<tr>
+<th>유형</th>
+<th>추가 입력</th>
+<th>연결 확인</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>영상 데이터</td>
+<td>RTSP URL (<code>rtsp://</code>로 시작)</td>
+<td>호출 후 15초 무응답 시 실패</td>
+</tr>
+<tr>
+<td>센서 데이터</td>
+<td>센서 유형 → 센서명 선택</td>
+<td>측정 항목 리스트 표시</td>
+</tr>
+<tr>
+<td>열화상 카메라</td>
+<td>RTSP URL 셀렉박스</td>
+<td>최고/최저/평균 온도 툴팁</td>
+</tr>
+<tr>
+<td>데이터 베이스</td>
+<td>InfluxDB 접속 정보</td>
+<td>(아래 참고)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>RTSP URL이 <code>rtsp://</code>로 시작하지 않으면 "올바르지 않은 rtsp url입니다" 에러가 뜬다. 외부 네트워크에서는 영상이 표시되지 않으니 사내망에서 확인한다.</p>
+</blockquote>
+<h2>InfluxDB 연결하기</h2>
+<p>데이터 베이스 유형은 현재 <strong>InfluxDB만</strong> 선택할 수 있다.</p>
+<ol>
+<li><strong>호스트·포트·사용자 정보</strong>를 입력하면 [비밀번호 입력] 버튼이 활성화된다.</li>
+<li><strong>비밀번호</strong>(별도 팝업)와 <strong>토큰</strong>(최대 200자)을 입력한다.</li>
+<li><strong>[연결 확인]</strong>을 누른다. 성공하면 "연결에 성공했습니다", 실패하면 사유별 안내(접속 정보·권한·서버 상태)가 뜬다.</li>
+<li>확인 후 저장한다. 접속 정보를 다시 바꾸면 확인 상태가 초기화되니 [연결 확인]을 다시 한다.</li>
+</ol>
+<h2>연결 상태 관리하기</h2>
+<p>등록한 소스는 리스트에서 연결 상태로 관리된다.</p>
+<table>
+<thead>
+<tr>
+<th>상태</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>정상 연결</td>
+<td>데이터가 정상 수집됨</td>
+</tr>
+<tr>
+<td>연결 진행 중</td>
+<td>등록 직후 첫 데이터 적재 전</td>
+</tr>
+<tr>
+<td>연결 실패</td>
+<td>진행 중 상태가 5분 경과</td>
+</tr>
+<tr>
+<td>연결 없음</td>
+<td>데이터가 수집되지 않음</td>
+</tr>
+</tbody>
+</table>
+<p>상태는 <strong>1분마다</strong> 갱신된다. <strong>연결 없음이 3시간 지속</strong>되면, 그 센서가 연결된 탐지 설정·AI 패키지 노드가 자동으로 비활성화(deactive)되고, 다시 정상 연결되면 자동으로 활성(active)으로 돌아온다. 1시간 이상 끊기면 에디터에게 안내 팝업이 발송된다.</p>
+<h2>삭제 시 주의</h2>
+<p>데이터 소스를 삭제하면 <strong>그 소스가 연결된 탐지 시나리오가 함께 삭제</strong>된다. "삭제시 관련된 탐지 시나리오가 모두 삭제 됩니다" 경고를 확인하고 진행한다.</p>
+<h2>다음 단계</h2>
+<ul>
+<li>등록한 데이터를 시나리오에서 쓰려면 <a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기</a>를 참고한다.</li>
+<li>모델을 배포하려면 <a href="./manage-models.html">모델 등록·배포하기</a>로 이어진다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>위젯 추가·편집하기 (편집 모드) · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>탐지 유형별 설정</summary><ul><li><a href="../../detection-type/index.html">소개</a></li><li><a href="../../detection-type/how-to/set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>대시보드·통계</summary><ul><li><a href="../index.html">소개</a></li><li><a href="../tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="edit-widgets.html" class="active">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">대시보드·통계</a> / <a href="index.html">하우투</a> / <span>위젯 추가·편집하기 (편집 모드)</span></p>
+    <p class="diataxis-badge">하우투</p><h1>위젯 추가·편집하기 (편집 모드)</h1><p class="description">편집 모드로 들어가 위젯을 추가하고, 위치·크기를 조정하고, 삭제한 뒤 저장하는 방법</p>
+<p>대시보드는 현장에 맞게 직접 구성한다. 위젯을 더하고 배치를 바꾸는 작업은 모두 <strong>편집 모드</strong>에서 한다. 편집 모드는 <strong>에디터 권한</strong>에만 보인다.</p>
+<h2>편집 모드 들어가기</h2>
+<ol>
+<li>대시보드 헤더의 <strong>편집 모드 토글</strong>을 누른다.</li>
+<li>헤더 아래에 [저장하기]·[위젯 생성] 버튼이 나타나고, 사이드바가 축소되며 그리드가 보인다.</li>
+</ol>
+<h2>위젯 추가하기</h2>
+<ol>
+<li><strong>[위젯 생성]</strong>을 누른다. 위젯 리스트 팝업이 열린다.</li>
+<li><strong>전체/차트/모니터링 탭</strong>에서 원하는 위젯 카드(이름·기본 크기·설명)를 고른다.</li>
+<li>선택하면 최소 크기로 화면에 생성되어, 빈 공간 중 기존 위젯과 가까운 곳에 자동 배치된다.</li>
+</ol>
+<blockquote>
+<p>남은 공간이 위젯 최소 크기보다 작으면 "위젯을 생성 하려면 위젯 최소 크기만큼의 영역을 만들어 주세요" 안내가 뜬다 — 다른 위젯을 줄여 공간을 먼저 만든다.</p>
+</blockquote>
+<h2>위치·크기 바꾸기</h2>
+<ul>
+<li><strong>이동</strong>: 위젯 헤더(붉은 점선 영역)를 잡고 드래그한다.</li>
+<li><strong>크기</strong>: 오른쪽 아래 모서리에 마우스를 올리면 크기 조정 아이콘이 나타난다. 드래그로 키우거나 줄인다.</li>
+<li>다른 위젯과 겹치면 붉은 고스트박스가 표시되고, 놓으면 원래 위치·크기로 되돌아간다.</li>
+</ul>
+<h2>위젯 이름·기간 설정하기</h2>
+<ul>
+<li>위젯 더보기 → <strong>[위젯 설정]</strong>에서 이름(최대 20자)과 조회 기간을 바꾼다.</li>
+<li>차트형 위젯은 [위젯 설정]과 별개로 <strong>차트 설정 팝업</strong>에서 기간·장소·항목을 더 세밀하게 설정한다.</li>
+</ul>
+<h2>삭제하고 저장하기</h2>
+<ol>
+<li>위젯 더보기 → <strong>[위젯 삭제]</strong>. 설정값이 있으면 확인 팝업이 뜬다.</li>
+<li>편집을 마치면 <strong>[저장하기]</strong>를 누른다. "대시보드 설정이 저장되었습니다" 토스트 후 조회 모드로 돌아간다.</li>
+</ol>
+<blockquote>
+<p>저장하지 않고 나가면 변경이 반영되지 않는다(삭제도 롤백). 변경사항이 있는데 편집을 종료하거나 다른 메뉴로 이동하면 확인 팝업이 뜬다.</p>
+</blockquote>
+<h2>다음 단계</h2>
+<ul>
+<li>추가할 수 있는 위젯 전체 목록은 <a href="../reference/widget-catalog.html">위젯 카탈로그</a>를 본다.</li>
+<li>작업자 모니터링 위젯 사용법은 <a href="./monitor-workers.html">작업자 상태 모니터링하기</a>로 이어진다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>

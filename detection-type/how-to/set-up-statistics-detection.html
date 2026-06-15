@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA) · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group"><summary>탐지 시나리오·노드</summary><ul><li><a href="../../detection-node/index.html">소개</a></li><li><a href="../../detection-node/tutorial/create-first-scenario.html">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../detection-node/how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-node/reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../../detection-node/explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group" open><summary>탐지 유형별 설정</summary><ul><li><a href="../index.html">소개</a></li><li><a href="set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="set-up-statistics-detection.html" class="active">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">탐지 유형별 설정</a> / <a href="index.html">하우투</a> / <span>통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)</span></p>
+    <p class="diataxis-badge">하우투</p><h1>통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)</h1><p class="description">고정 임계치 대신 평소 패턴 대비 이상치를 잡는 통계 분석 탐지(Z-Score·변화율·EWMA)를 설정하고 탐지 데이터를 읽는 방법</p>
+<p>통계 분석 탐지는 "고정된 선"이 아니라 <strong>평소 패턴에서 얼마나 벗어났는가</strong>로 이상을 잡는다. 절대값은 정상 범위라도 갑자기 튀거나 추세가 어긋나면 탐지한다. 임계치만으로는 잡기 어려운 미묘한 이상에 쓴다.</p>
+<h2>세 가지 분석 방식</h2>
+<table>
+<thead>
+<tr>
+<th>유형</th>
+<th>무엇을 보나</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z-Score 탐지</td>
+<td>평균 대비 표준편차의 몇 배만큼 벗어났는가</td>
+</tr>
+<tr>
+<td>변화율 탐지</td>
+<td>이전 시점 대비 얼마나 급격히 변했는가</td>
+</tr>
+<tr>
+<td>EWMA 탐지</td>
+<td>지수가중이동평균으로 누적 오차의 추세가 어긋나는가</td>
+</tr>
+</tbody>
+</table>
+<h2>설정 절차</h2>
+<ol class="steps">
+<li>시나리오에 분석할 <strong>센서 데이터</strong>(또는 해당 AI 패키지)를 연결한다.</li>
+<li><strong>통계 분석 탐지 노드</strong>를 구성하고, 위 세 방식 중 측정 항목에 맞는 것을 적용한다.</li>
+<li><strong>이벤트 설정 노드</strong>로 발생 조건을 정하고 알림 노드를 붙인다.</li>
+</ol>
+<h2>탐지 데이터 읽는 법</h2>
+<p>통계 탐지는 그래프로 읽는 게 핵심이다.</p>
+<ul>
+<li><strong>센서 태그</strong>로 측정 항목을 골라 본다.</li>
+<li><strong>평균값 점선</strong>: 365일 기준 평균값이 점선으로 깔린다 — 이게 "평소"의 기준선이다.</li>
+<li><strong>붉은 점</strong>: 이번 탐지 데이터 기준점이다. 평균선에서 얼마나 떨어졌는지로 이상 정도를 가늠한다.</li>
+<li><strong>동일 유형 탐지 이력</strong>: 같은 장소·센서·항목의 과거 이상 탐지가 점으로 함께 표시되어, 단발성인지 반복되는 문제인지 맥락을 본다.</li>
+<li><strong>센서값 박스</strong>: "센서값/센서평균" 형식(예: "654°C /432°C")으로 현재값과 평균을 나란히 보여준다.</li>
+</ul>
+<blockquote>
+<p>그래프 X축은 이벤트 발생 시점 기준 4시간 전 ~ 2시간 후를 보여주고, 점에 마우스를 올리면 데이터 소스명·기준점 기간(10분 단위)·발생 시간·센서값이 툴팁으로 뜬다.</p>
+</blockquote>
+<h2>다음 단계</h2>
+<ul>
+<li>태양광 발전량 예측 대비 저하를 추적하는 EWMA 응용은 <a href="./set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기</a>를 참고한다.</li>
+<li>단순히 값이 선을 넘는지로 판정하려면 <a href="./set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기</a>를 본다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>

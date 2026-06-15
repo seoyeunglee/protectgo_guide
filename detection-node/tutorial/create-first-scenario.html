@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>첫 탐지 시나리오 만들기 · Protect Go 사용자 가이드</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <a class="sidebar-title" href="../../index.html">Protect Go 사용자 가이드</a>
+    <details class="nav-group"><summary>시작하기</summary><ul><li><a href="../../getting-started/index.html">소개</a></li><li><a href="../../getting-started/tutorial/sign-up-and-login.html">회원가입하고 처음 로그인하기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../getting-started/how-to/manage-account.html">내 계정·비밀번호 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../getting-started/reference/screen-layout.html">화면 구성 한눈에 보기 (헤더·사이드바)<span class="type-badge">레퍼런스</span></a></li><li><a href="../../getting-started/explanation/access-and-errors.html">접근 제한·에러 화면이 뜨는 경우<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>프로젝트 생성·관리</summary><ul><li><a href="../../project-creation/index.html">소개</a></li><li><a href="../../project-creation/tutorial/create-first-project.html">첫 프로젝트 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../project-creation/how-to/switch-project.html">다른 프로젝트로 전환하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/invite-member.html">멤버 초대하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/manage-places.html">장소·구역·설비 관리하기<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/how-to/change-project-settings.html">프로젝트 설정 변경하기 (이름·초대 코드·데이터 저장)<span class="type-badge">하우투</span></a></li><li><a href="../../project-creation/reference/permission-matrix.html">권한별 기능 레퍼런스<span class="type-badge">레퍼런스</span></a></li></ul></details><details class="nav-group" open><summary>탐지 시나리오·노드</summary><ul><li><a href="../index.html">소개</a></li><li><a href="create-first-scenario.html" class="active">첫 탐지 시나리오 만들기<span class="type-badge">튜토리얼</span></a></li><li><a href="../how-to/use-ai-package-node.html">AI 패키지 노드 사용하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/connect-data-node.html">데이터 노드 연결하기 (센서·CCTV·열화상·DB)<span class="type-badge">하우투</span></a></li><li><a href="../how-to/configure-alert-node.html">알림·제어 노드 설정하기 (대시보드·모바일·담당자 자동 배정)<span class="type-badge">하우투</span></a></li><li><a href="../how-to/place-edge-device-node.html">엣지 디바이스 노드 배치하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기<span class="type-badge">하우투</span></a></li><li><a href="../how-to/configure-detection-setting-node.html">탐지 설정 노드 구성하기<span class="type-badge">하우투</span></a></li><li><a href="../reference/node-connection-rules.html">노드 연결 규칙·단축키<span class="type-badge">레퍼런스</span></a></li><li><a href="../reference/node-catalog.html">노드 카탈로그 레퍼런스<span class="type-badge">레퍼런스</span></a></li><li><a href="../explanation/when-detection-starts.html">탐지는 언제 시작되고 어떤 모델을 쓰는가<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>탐지 유형별 설정</summary><ul><li><a href="../../detection-type/index.html">소개</a></li><li><a href="../../detection-type/how-to/set-up-db-threshold-detection.html">DB 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-power-efficiency-detection.html">발전 효율 저하 탐지 설정하기 (태양광)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-sensor-threshold-detection.html">센서 임계치 탐지 설정하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-video-anomaly-detection.html">영상 이상 탐지 설정하기 (쓰러짐·안전모 등)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/check-detection-status.html">탐지 확인 현황 보기·대응하기<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/how-to/set-up-statistics-detection.html">통계 분석 탐지 설정하기 (Z-Score·변화율·EWMA)<span class="type-badge">하우투</span></a></li><li><a href="../../detection-type/explanation/detection-types-overview.html">어떤 탐지 유형을 골라야 하나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>대시보드·통계</summary><ul><li><a href="../../dashboard-statistics/index.html">소개</a></li><li><a href="../../dashboard-statistics/tutorial/explore-dashboard.html">대시보드 살펴보기<span class="type-badge">튜토리얼</span></a></li><li><a href="../../dashboard-statistics/how-to/edit-widgets.html">위젯 추가·편집하기 (편집 모드)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/monitor-workers.html">작업자 상태 모니터링하기 (스마트워치 연동)<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/how-to/analyze-statistics.html">통계 페이지에서 이상 추이 분석하기<span class="type-badge">하우투</span></a></li><li><a href="../../dashboard-statistics/reference/widget-catalog.html">위젯 카탈로그<span class="type-badge">레퍼런스</span></a></li><li><a href="../../dashboard-statistics/explanation/how-widget-values-work.html">위젯 수치는 어떻게 계산되나<span class="type-badge">설명</span></a></li></ul></details><details class="nav-group"><summary>데이터·모델 관리</summary><ul><li><a href="../../data-model/index.html">소개</a></li><li><a href="../../data-model/how-to/manage-models.html">모델 등록·배포하기<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/manage-documents.html">문서 등록·관리하기 (벡터 DB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/how-to/register-connection-data.html">연결 데이터 등록·관리하기 (영상·센서·열화상·InfluxDB)<span class="type-badge">하우투</span></a></li><li><a href="../../data-model/reference/data-connection-status.html">연결 상태와 자동 비활성화 정책<span class="type-badge">레퍼런스</span></a></li><li><a href="../../data-model/explanation/ai-package-and-model-priority.html">AI 패키지란? 모델은 어떤 순서로 쓰이나<span class="type-badge">설명</span></a></li></ul></details>
+  </nav>
+  <main class="content">
+    <p class="breadcrumb"><a href="../../index.html">홈</a> / <a href="../index.html">탐지 시나리오·노드</a> / <a href="index.html">튜토리얼</a> / <span>첫 탐지 시나리오 만들기</span></p>
+    <p class="diataxis-badge">튜토리얼</p><h1>첫 탐지 시나리오 만들기</h1><p class="description">탐지 설정에서 시나리오를 생성하고, 캔버스에서 노드를 연결해 탐지를 시작하는 과정</p><figure class="guide-figure"><div class="guide-slider"><div class="guide-slide active"><div class="guide-figure-frame"><img src="../../assets/screens/detection-node.create-first-scenario--scenario-list.png" alt="첫 탐지 시나리오 만들기 — 탐지 설정 — 시나리오 목록" width="1600" height="900"><span class="highlight-box" style="left:1.50%;top:14.44%;width:16.88%;height:4.89%" title="탐지 설정 메뉴"><span class="hotspot">1</span></span><span class="highlight-box" style="left:37.62%;top:15.57%;width:8.62%;height:4.44%" title="시나리오 생성 버튼"><span class="hotspot">2</span></span></div><p class="guide-slide-caption">단계 1·2 · 탐지 설정 — 시나리오 목록</p></div><div class="guide-slide"><div class="guide-figure-frame"><img src="../../assets/screens/detection-node.create-first-scenario--create-modal.png" alt="첫 탐지 시나리오 만들기 — 탐지 시나리오 생성 팝업" width="1600" height="900"><span class="highlight-box" style="left:56.44%;top:68.72%;width:7.00%;height:3.56%" title="생성하기 (이름·장소·폴더 입력 후)"><span class="hotspot">3</span></span></div><p class="guide-slide-caption">단계 3 · 탐지 시나리오 생성 팝업</p></div><div class="guide-slide"><div class="guide-figure-frame"><img src="../../assets/screens/detection-node.create-first-scenario--canvas.png" alt="첫 탐지 시나리오 만들기 — 시나리오 캔버스 — 노드 구성과 탐지 시작" width="1600" height="900"><span class="highlight-box" style="left:0.98%;top:61.90%;width:4.10%;height:1.78%" title="노드 카테고리 사이드바"><span class="hotspot">4</span></span><span class="highlight-box" style="left:91.75%;top:1.33%;width:7.50%;height:4.44%" title="탐지 시작 버튼"><span class="hotspot">5</span></span></div><p class="guide-slide-caption">단계 4·5 · 시나리오 캔버스 — 노드 구성과 탐지 시작</p></div><div class="guide-slider-nav"><button type="button" class="guide-slider-btn" data-dir="-1">&#8249; 이전</button><span class="guide-slider-counter">1 / 3</span><button type="button" class="guide-slider-btn" data-dir="1">다음 &#8250;</button></div></div><figcaption>마지막 캡처: 2026-06-12T04:07:49+00:00 · 기준 코드: ProtectGO-ENT-FE@8b277532d3eca6bfdbf3cf6d6aca314e39b82030<br>이 화면 다시 캡처: <code>python agent/scripts/capture_screens.py --only detection-node.create-first-scenario</code></figcaption></figure><script>
+document.querySelectorAll(".guide-slider").forEach(function (slider) {
+  var slides = slider.querySelectorAll(".guide-slide");
+  var counter = slider.querySelector(".guide-slider-counter");
+  var idx = 0;
+  function show(i) {
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function (slide, j) { slide.classList.toggle("active", j === idx); });
+    if (counter) counter.textContent = (idx + 1) + " / " + slides.length;
+  }
+  slider.querySelectorAll(".guide-slider-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () { show(idx + Number(btn.dataset.dir)); });
+  });
+  show(0);
+});
+</script>
+<p>탐지 시나리오는 "어떤 데이터를, 어떤 기준으로 감시하고, 누구에게 알릴지"를 노드로 연결해 정의한 것이다. 이 튜토리얼은 시나리오를 새로 만들고, 캔버스에서 노드를 연결해 탐지를 시작하는 과정을 다룬다. 노드와 시나리오 개념이 처음이라면 <a href="../index.html">탐지 시나리오·노드 소개</a>를 먼저 읽는 것을 권장한다.</p>
+<h2>절차</h2>
+<ol class="steps">
+<li>좌측 메뉴에서 <strong>탐지 설정</strong>으로 이동한다. 폴더별 시나리오 목록과 활성 상태가 표시된다.</li>
+<li><strong>시나리오 생성</strong> 버튼을 누른다.</li>
+<li><strong>탐지 시나리오 생성</strong> 팝업에서 시나리오 이름을 입력하고, 적용할 장소와 저장 폴더를 선택한 뒤 <strong>생성하기</strong>를 누른다. 같은 이름의 시나리오가 이미 있으면 에러 텍스트가 표시된다. 생성하면 시나리오 설정 화면(캔버스)이 바로 열린다.</li>
+<li>캔버스 좌측의 <strong>노드 카테고리 사이드바</strong>에서 노드를 추가하고 왼쪽에서 오른쪽으로 연결한다. 기본 흐름은 데이터(센서·카메라)에서 시작해 탐지 설정, 이벤트 설정을 거쳐 알림 및 제어로 끝난다. 이벤트 설정 노드의 상세 입력은 <a href="../how-to/configure-event-setting-node.html">이벤트 설정 노드 구성하기</a>를 참고한다.</li>
+<li>노드 설정을 저장한 뒤 <strong>탐지 시작</strong>을 누른다. 현재 설정된 시나리오로 탐지가 시작된다.</li>
+</ol>
+<h2>시작 전 알아두기</h2>
+<ul>
+<li>탐지 시나리오는 데이터 소스와 판정 방식에 따라 5종으로 나뉜다: 영상 이상 탐지, DB 임계치 탐지, 센서 임계치 탐지, 통계 분석 탐지, 발전 효율 저하 탐지. 어떤 유형을 쓸지는 감시하려는 데이터가 무엇인지에 따라 정해진다.</li>
+<li>저장하지 않은 설정값이 있는 상태로 화면을 나가면 안내 팝업이 표시된다. 작업 중간에는 저장 버튼으로 수시로 저장한다.</li>
+<li><strong>초기화</strong> 버튼은 시나리오의 전체 노드 정보를 삭제하고 탐지를 비활성화한다. 전체 삭제 확인 팝업을 거치지만, 삭제된 구성은 되돌릴 수 없으므로 주의한다.</li>
+</ul>
+<h2>다음 단계</h2>
+<ul>
+<li>탐지가 시작되면 이상 상황이 알림으로 도착한다 — <a href="../how-to/handle-anomaly-situation.html">이상 상황 알림 확인하기</a>에서 확인 방법을 다룬다.</li>
+</ul>
+  </main>
+</div>
+</body>
+</html>
